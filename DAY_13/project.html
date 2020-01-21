@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Airtel</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    #wel{
+        
+      
+      -webkit-animation-name: example;
+      -webkit-animation-duration: 4s; 
+    animation-name: example;
+      animation-duration: 100s;
+}
+        @-webkit-keyframes example {
+      0%   {color: red;}
+      25%  {color: yellow;}
+      50%  {color: blue;}
+      100% {color: green;}
+}
+  </style>
+</head>
+<body>
+
+<div class="jumbotron jumbotron-fluid" style="background-color:rgb(238,28,37); height: 95px;" >
+  <img src="https://s3-ap-southeast-1.amazonaws.com/bsy/iportal/images/airtel-logo-white-text-horizontal.jpg" style=" width:10%; height:7%; position: absolute; margin-left: 8%; margin-top: -2%;" >
+  <div class="container" >
+  
+    <h1 style="text-align: center; position: relative; margin-top: -2%; color: white;font-family: all; font-size: 55px;">Handover</h1>      
+    
+  </div>
+</div>
+
+
+<div class="container mt-3">
+  <h2 id="wel" style="float: left;">Wecome</h2>
+  <h2 style="margin-left:  15%;">Airtel</h2>
+  <br>
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a class="nav-link active" onclick="showPage()" href="#Enter CRQ">Enter CRQ</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Enter Fault Ticket">Enter Fault Ticket</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#Others">Others</a>
+    </li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div id="home" class="container tab-pane active">
+     
+
+<script>
+$(document).ready(function(){
+  $(".nav-tabs a").click(function(){
+    $(this).tab('show');
+  });
+});
+</script>
+</body>
+</html>

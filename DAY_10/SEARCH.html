@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+  $("#hide").click(function(){
+  $("#tr1").slideDown("slow");
+  $("#tr2").slideDown("slow");
+  $("#tr3").slideDown("slow");
+  $("#tr4").slideDown("slow");
+   });
+  $("#show").click(function(){
+    $("#tr1").slideUp("slow");
+    $("#tr2").slideUp("slow");
+    $("#tr3").slideUp("slow");
+     $("#tr4").slideUp("slow");
+
+  });
+});
+</script>
+<style type="text/css">
+body{
+  background-image: url(image.png);
+  background-repeat: no-repeat;
+
+  width: 99%;
+  height: 640px;
+
+  background-position: center center;
+
+  background-size: 100% 100%;
+
+}
+select{
+
+  width: 12%; 
+  height: 25px;
+   font-size: 20PX;
+}  header{
+      color: white;
+      height: 50px;
+      background:rgb(113, 93, 89);
+   }
+   header h1{
+      margin-top:0%;
+      margin-left: 37%; 
+      font-size: 30px;
+   }
+   input{
+   	height: 25px;
+   	
+   }
+   .button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-left: 190%;
+}
+.button3 {background-color: #f44336;}
+.fa { transform: scale(1.9,1.5); 
+}
+table {
+  font-family: arial, sans-serif;
+  width: 100%;
+}
+
+td, th {
+ 
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(odd) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+<table>
+  <header>
+      
+    <h1>SELECT FILLTER</h1>
+    <p id="demo"></p>   
+  </header>
+   <tr id="tr1">
+      <td><input  placeholder="CRQ Raised On" type="text"onfocus="(this.type='date')" style="width: 55%;"></td>
+      <td><input type="text" name="vendor1" placeholder="VENDOR Company"></td>
+      <td><input type="text" name="osm1" placeholder="OSM Engineer Name"></td>
+       <td>
+       		<select style="width: 55%;">
+       			<option value="" disabled selected>Select</option>
+				    <option>
+					   <li>OPEN</li>
+				    </option>
+				    <option>
+					   <li>CLOSE</li>
+				    </option>
+			    </select>
+		   </td>
+      </tr>
+     <tr id="tr2">
+        <td><input type="text" name="crq1" placeholder="CRQ Number"></td>
+        <td><input type="text" name="vendor2" placeholder="VENDOR Engineer Name"></td>
+        <td><input type="text" name="osm2" placeholder="OSM Engineer Contact"></td>
+        <td><input type="text" name="col1" placeholder=""></td>
+      </tr>
+      <tr id="tr3">
+        <td><input placeholder="CRQ Date" type="text"onfocus="(this.type='date')" style="width: 55%;"></td>
+        <td><input type="text" name="vendor2" placeholder="Vender Engineer Contact"></td>
+        <td><input type="text" name="osm3" placeholder="NOC Engineer Name"></td>
+        <td><input type="text" name="col2" placeholder=""></td>
+      </tr>
+
+
+      <tr id="tr4">
+            <td><button  class="button button3">SEARCH</button></td>
+      </tr>
+      <tr><td colspan="4" style="height: 9px;"><p style="margin-left: 48%;margin-top:-1.3%; position: absolute;"><i class="fa fa-caret-up" id="show"></i><br></p>
+          <p style="margin-left: 48%;position: absolute;margin-top: 0%;"><i class="fa fa-caret-down" id="hide"></i></p></td></tr>
+
+     </table>
+</body>
+</html>

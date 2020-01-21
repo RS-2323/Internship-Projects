@@ -1,0 +1,112 @@
+		<!DOCTYPE html>
+		<html>
+		<head>
+			<title>login</title>
+
+			<style type="text/css">
+			body{
+				background-color: white;
+			}
+			header{
+				background:red;
+				color: white;
+				border-bottom: 30px solid rgb(113,93,89);
+
+				width: 100%;
+			}
+			header h1{
+				display: inline-block;
+
+				margin-left: 30%;	
+			}
+
+			li{
+				display: inline-block;
+				padding: .5%;
+				text-align: center;
+				background:red;
+			}
+			#demo{
+					
+					display: inline-block;
+					float: right;
+					position: relative;
+					margin-left: 99px;
+
+			}
+			img{
+
+					height: 40px;
+					width: 130px;
+					display: inline-block;
+					border-radius: 30px;
+					float: left;
+				}
+		#watermark
+		{
+
+		}
+		#div1{
+			/*background-color: tan;*/
+			border:5px solid black;
+			width: 70%;
+			height: 345px;
+			border-radius: 90px 50px 50px 0px; 
+			/*background-image: url('logo.png');*/	
+			opacity:0.7;
+			 margin-top: 5%
+			}
+
+			</style>
+
+		</head>
+		<body>
+		<div>
+			<header>
+				<li><img src="airtel.png"></li>		
+				<h1>BRAS  IP  POOL</h1>
+				<p id="demo"></p>		
+			</header>
+		</div>
+			<center>
+				<div id="div1" align="center">
+				
+
+			<!-- <form class="form"> -->
+				<span style="display: inline-block;">
+					<strong>
+				<p style="margin-left: -10%; font-size: 30px;">BRAS:</p>
+				</strong>
+			</span>
+			
+			
+			<span>
+				<select style="width: 20%; height: 35px; padding-top: 8px; font-size: 25px;">
+					<option><li>ALL</li></option>
+					<option><li>BRAS-1</li></option>
+					<option><li>BRAS_2</li></option>
+				</select>
+			</span>
+			
+		<br>
+		<br>
+				<span style="display: inline-block;">
+					<strong>
+				<p style="margin-right: -0.1%; font-size: 30px; ">ENTER IP:</p>
+				</strong>
+			</span>
+
+			<input type="text" name="name" style="width: 20%; height: 30px;  font-size: 25px; margin-right: 5.5%"  placeholder="BRAS">
+		</span>
+			<br>
+			<br>
+				
+				<button class="button" type="submit" formaction="display.html" style="color: red; width: 20%; height: 30px; background-color:white; "><span>submit</span></button>	
+			</div>
+		</center>
+
+		<script type="text/javascript">
+			document.getElementById("demo").innerHTML=Date();
+		</script>
+		</body>
+		</html>

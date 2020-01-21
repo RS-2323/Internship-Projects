@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+	body{	
+		  height: 700px;
+		  background: #e6e6ff;
+		  font-family: Georgia;		
+		}
+
+	 #t1{
+	 		background: rgb(238,28,37);
+      		color: white;
+      		border-bottom:30px solid rgb(113, 93, 89);
+      		width: 100%;
+      		height: 15%;		
+		 }
+
+	 img{
+	 	height: 37%;
+	 	width: 48%;
+	 }
+
+	.th1{
+		width: 15%;
+		text-align: center;
+	}
+
+	.th2{
+		width: 85%;
+		font-size: 200%;
+		text-align: center;
+		padding-right: 10%;
+	}
+
+	#div1{
+		text-align: center;
+		height: 64%;
+		width: 100%;
+	}
+
+	#t2{
+		float: left;
+		text-align: left;
+		width: 50%;
+		height: 80%;
+		padding-left: 10%;
+	}
+
+	#t3{
+		float: right;
+		text-align: left;
+		width: 50%;
+		height: 60%;	
+		padding-right: 10%;
+	}
+
+	.contained{
+		font-weight: bold;
+		height: 60px;
+
+	}
+
+	.td1{
+		padding-left: 20%;
+
+	}
+	
+
+	input{
+		height: 40%;
+		width: 60%;
+	}
+
+	.status{
+		color: red;
+	    width: 70%;
+	    height: 40%;
+	    font-size: 100%;
+
+	}
+	
+
+	#t4{
+		height: 20%;
+		width: 100%;
+		margin-top: -2%;
+
+	}
+
+	.submit{
+		
+/*		height: 40%;
+		width: 20%;*/
+		color: #b30000;
+		background: #ff3333;
+		font-size: 150%;
+		border-radius: 15%;
+		outline: none; 
+
+	}
+
+	.contained td {
+    padding-top: 1em;
+}
+t.contained:nth-child(4) td {
+    padding-top: 0;
+}
+
+
+</style>
+</head>
+
+
+<body>
+
+	<table id="t1">
+		<tr>
+			<td class="th1"><img src="aitel_white_logo.png"></td>
+			<td class="th2"> ENTER NEW TICKET</td>
+		</tr>
+	</table>
+
+
+
+<div id="div1">
+	<table id="t2"><br>	
+
+
+		<tr class="contained">
+			<td class="td1">Ticket Open Date</td>
+			<td class="td2"><input type="text"onfocus="(this.type='date')"></td>
+		</tr>
+
+		<tr class="contained">
+			<td  class="td1">Ticket Close Date</td>
+			<td class="td2"><input type="text"onfocus="(this.type='date')"></td>
+		</tr>
+
+		<tr class="contained">
+			<td class="td1">Vendor Company Name</td>
+			<td class="td2"><input type="text" name="vendor1"></td>
+		</tr>
+
+
+
+
+		<tr class="contained">
+			<td  class="td1">Vendor Ticket Number</td>
+			<td class="td2"><input type="text" name="vendor2"></td>
+			
+		</tr>
+
+		<tr class="contained">
+			<!-- <td  class="td1">NOC Engineer Name</td>
+			<td  class="td2"><input type="text" name="vendor3"></td> -->
+		
+			<td class="td1"><b>Problem Statement</b></td>
+			<td style="padding-top: 6%;"><textarea rows="4" cols="24"></textarea></td>
+		
+
+		</tr>
+
+
+	</table>
+		
+
+
+	<table id="t3" style="float: right; text-align: left; width: 50%; height: 80%;">	
+
+
+		<tr class="contained">
+			<td  class="td1">Vendor Engineer Name</td>
+			<td  class="td2"><input type="text" name="vendor3"></td>
+		</tr>
+		
+
+		<tr class="contained">
+			<td class="td1">NOC Remedy Ticket</td>
+			<td  class="td2"><input type="text" name="O&M1"></td>
+		</tr>
+
+		<tr class="contained">
+			<td class="td1">RCA</td>
+			<td class="td2"><input type="text" name="O&M2"></td>
+		</tr>
+
+
+		
+		<tr class="contained">
+			<td class="td1">NOC Engineer Name</td>
+			<td class="td2"><input  type="text" name="NOC"></td>
+		</tr>
+
+
+		
+		<tr class="contained">
+			<th class="td1">Description</th>
+
+			<td style="padding-top: 6%;"><textarea rows="4" cols="24"></textarea></td>
+		</tr>
+	</table>
+
+</div>
+
+	<table id="t4">	
+		<tr>
+			<td>
+				<button class="submit" style="margin-left: 57%;position: absolute;margin-top: -5%;"><b>SUBMIT</b></button>
+			</td>
+			<th class="td1" style="position: absolute;margin-left: -4.8%;">Status</th>
+			<td><select style="color: red;
+    width: 14%;
+    height: 23%;
+    font-size: 100%;
+    background: honeydew;
+    font-weight: 500;
+    margin-left: 29%;
+    margin-bottom: 9%;">
+			<option>OPEN</option>
+			<option>CLOSE</option>
+			</select></td>
+		</tr>
+
+
+	</table>
+	
+</body>
+</html>

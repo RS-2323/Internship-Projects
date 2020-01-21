@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>login</title>
+
+	<style type="text/css">
+	body{
+		background-color: white;
+	}
+	header{
+		background:red;
+		color: white;
+		border-bottom: 20px solid rgb(113, 93, 89);	
+		width: 100%;
+	}
+	header h1{
+		display: inline-block;
+
+		margin-left: 30%;	
+	}
+
+	li{
+		display: inline-block;
+		padding: .5%;
+		text-align: center;
+		background:red;
+	}
+	#demo{
+			
+			display: inline-block;
+			float: right;
+			position: relative;
+			margin-left: 99px;
+
+	}
+	img{
+
+			height: 40px;
+			width: 130px;
+			display: inline-block;
+			border-radius: 30px;
+			float: left;
+		}
+#watermark
+{
+
+}
+#div1{
+	/*background-color: tan;*/
+	border:2px solid black;
+	width: 70%;
+	height: 345px;
+	background-image: url('logo.png');	
+	opacity:0.7;
+	}
+
+	</style>
+
+</head>
+<body>
+	<header>
+		<li><img src="airtel.png"></li>		
+		<h1>BRAS  IP  POOL</h1>
+		<p id="demo"></p>		
+	</header>
+	<center><div id="div1" align="center">
+		
+
+	<!-- <form class="form"> -->
+		<p style="margin-right: 16%; font-size: 30px; position: relative;">&#8199 &#8199 &#8199 ENTER IP:</p><input type="text" name="name" style="width: 20%; height: 19px;" placeholder="BRAS">
+		<p style="margin-right: 16%; font-size: 30px; ">BRAS:</p><select style="width: 20%; height: 19px;">
+			<option><li>ALL</li></option>
+			<option><li>BRAS-1</li></option>
+			<option><li>BRAS_2</li></option>
+		</select><br><br>
+
+		<button type="submit" formaction="C:\Users\Om\Desktop\Airtel_Project\display.html"><span>Submit</span></button>
+	</div></center>
+
+<script type="text/javascript">
+	document.getElementById("demo").innerHTML=Date();
+</script>
+</body>
+</html>

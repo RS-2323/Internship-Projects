@@ -1,0 +1,55 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+public class Step_1 {
+ 
+	@SuppressWarnings("unused")
+	public static void main(String[] args) throws IOException
+	{
+		String strLine="";
+	try
+	{
+	ArrayList<String> ar = new ArrayList<String>();
+	File csvFile = new File("C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_12\\DoubleColonNorthWest.csv");
+	FileWriter writer = new FileWriter("C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_12\\step_1.csv");
+	BufferedReader br = new BufferedReader(new FileReader(csvFile));
+	String line = "";
+
+	while ((line = br.readLine()) != null) {
+//System.out.println(line);
+	String[] arr = line.split(",");
+	if(arr.length==3) {
+		String col3[]=arr[2].split(" ");
+		
+			writer.write(arr[0]+","+arr[1]+","+col3[1]+","+col3[2]+","+col3[3]+","+col3[4]+"\r\n");
+		
+		System.out.println();
+	}else {
+		writer.write(arr[0]+","+arr[1]+"\r\n");
+		
+		System.out.println();
+	}
+ 	
+	}
+
+	br.close();
+    writer.close();
+	}
+	
+	
+	catch (FileNotFoundException e) {
+		e.printStackTrace();
+        System.err.println("File not found");
+    } catch (IOException e) {
+        System.err.println("Unable to read the file.");
+    }
+	
+	}
+}
+
+
+	
