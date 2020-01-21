@@ -1,0 +1,48 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+
+public class ss {
+
+    public static void main(String a[]) throws IOException{
+        String strLine = "";
+        
+        
+        try {
+            LineNumberReader reader = new LineNumberReader(new InputStreamReader(new FileInputStream("C:\\Users\\Om\\Documents\\Ria_Sharma\\src\\question.csv")));
+            FileWriter writer = new FileWriter("C:\\Users\\Om\\Documents\\Ria_Sharma\\src\\first_step.csv");
+            while (((strLine = reader.readLine()) != null))
+             {	System.out.println(strLine);
+         	int len=strLine.length();
+         	System.out.println(len);
+         	if(strLine.charAt(len-1) == '.' && strLine.contains("ip ."))
+            	
+            	
+            	{
+            		
+            				System.out.println(strLine.replace("ip .", "ip "));
+//            				writer.write(strLine.replace("ip .", "ip ")+"\r\n");
+            			}
+            		else 
+            			{
+;
+            				System.out.println(strLine);
+            				writer.write(strLine+"\r\n");
+            				
+            			}
+            		
+               }         
+            writer.close();
+           reader.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found");
+        } catch (IOException e) {
+            System.err.println("Unable to read the file.");
+        }
+
+}
+
+}

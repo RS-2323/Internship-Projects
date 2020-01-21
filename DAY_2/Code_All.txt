@@ -1,0 +1,65 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+
+ 
+public class ALL {
+
+    public static void main(String a[]) throws IOException{
+        String strLine = "";
+        
+        
+        try {
+            LineNumberReader reader = new LineNumberReader(new InputStreamReader(new FileInputStream("C:\\Users\\Om\\Documents\\Ria_Sharma\\src\\Static_RCA_change_report_for_20190105_091501.csv")));
+            FileWriter writer = new FileWriter("C:\\Users\\Om\\Desktop\\Airtel_Project\\Java_Airtel\\ALL.csv");
+            while (((strLine = reader.readLine()) != null))
+             {
+            	int ascii=strLine.charAt(0);
+            	//System.out.println(ASCII);
+            	
+            	if(strLine.charAt(0) != '0')
+            	{
+            		
+            			if(ascii >= 65 && ascii <=122 )
+            		
+            	   //if(strLine.charAt(0)==(tempt<=122) && strLine.charAt(0)==(temp>=65))
+            	   
+            			{
+            				writer.write(strLine+"\r\n");
+            				//writer.write("\r\n");
+            		         
+            				System.out.println(strLine);
+            			}
+            		else 
+            			{
+            			writer.write('0'+strLine+"\r\n");
+            			//writer.write("\r\n");
+            				System.out.println('0'+strLine);
+            				
+            			}
+            		
+               }
+            	else
+            	{
+            		writer.write(strLine+"\r\n");
+            		//writer.write("\r\n");
+            		System.out.println(strLine);
+            	}
+              
+            }
+            writer.close();
+           reader.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found");
+        } catch (IOException e) {
+            System.err.println("Unable to read the file.");
+        }
+
+}
+
+    
+    
+    }

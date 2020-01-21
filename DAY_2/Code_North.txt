@@ -1,0 +1,43 @@
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.LineNumberReader;
+
+ 
+public class North {
+
+    public static void main(String a[]) throws IOException{
+        String strLine = "";
+        
+        
+        try {
+            LineNumberReader reader = new LineNumberReader(new InputStreamReader(new FileInputStream("C:\\Users\\Om\\Desktop\\Airtel_Project\\Java_Airtel\\ALL.csv")));
+            FileWriter writer = new FileWriter("C:\\Users\\Om\\Desktop\\Airtel_Project\\Java_Airtel\\NORTH.csv");
+            writer.write("DSL Id,Current RCA Value,Primary IP,DSL ID:RCA:IP,HUB,Circle"+"\r\n");
+            while (((strLine = reader.readLine()) != null))
+             {
+
+            	
+            	if(strLine.contains("North") )
+            	{
+	
+            		writer.write(strLine+"\r\n");
+            		System.out.println(strLine);
+               }
+	
+              
+            }
+            writer.close();
+           reader.close();
+        } catch (FileNotFoundException e) {
+            System.err.println("File not found");
+        } catch (IOException e) {
+            System.err.println("Unable to read the file.");
+        }
+
+}
+
+    }
+
