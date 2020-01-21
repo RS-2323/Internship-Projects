@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SELECT2</title>
+  <style type="text/css"> 
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  
+}
+   .div-style-7{
+    max-width:400px;   
+}
+.div-style-7 div{   
+    padding: 9px;   
+    border-radius: 3px;
+}
+.div-style-7 div > label{
+    float: left;
+    margin-top: -19px;
+    background: #FFFFFF;
+    padding: 2px 5px 2px 5px;
+    color: #B9B9B9;
+}
+.div-style-7 input[type="text"],
+.div-style-7 input[type="date"],
+.div-style-7 textarea,
+.div-style-7 select 
+{    
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;   
+    line-height: 25px;
+    font-size: 16px;
+}
+.div-style-7 div > span{
+    background: #F3F3F3;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+input{
+  height: 15px;
+}
+textarea{
+  height: 40px;
+  }
+.example_b {
+color: #fff !important;
+background: #60a3bc;
+padding: 20px;
+border-radius: 20px;
+display: inline-block;
+border: none;
+cursor: pointer;
+}
+.example_b:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+  </style>
+
+</head>
+<body>
+
+<div class="container" style="height: 80%;margin-left: 12%;margin-top: 0%;">
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Ticket Open Date</label>
+       <input type="text"onclick="(this.type='date')" maxlength="100">
+    <span>Enter Ticket Open Date</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Vendor Engineer Name</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Vendor Engineer Name</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Ticket Close Date</label>
+    <input type="text"onfocus="(this.type='date')" maxlength="100" >
+    <span>Enter Ticket Close Date</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">NOC Remedy Ticket</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter NOC Remedy Ticket</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Vendor Company Name</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Vendor Company Name</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">RCA</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter RCA</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Vendor Ticket Number</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Vendor Ticket Number</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">NOC Engineer Name</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter NOC Engineer Name</span>
+</div>
+</ul>
+</div>
+
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Problem Statement</label>
+    <textarea name="bio" onkeyup="adjust_textarea(this)"></textarea>
+    <span>Enter Problem Statement</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Description</label>
+    <textarea name="bio" onkeyup="adjust_textarea(this)"></textarea>
+    <span>Enter Description</span>
+</div>
+
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;"> 
+    <label for="bio">Status</label>
+    <select style="float: none;">
+    <option value="" disabled selected>Status</option>
+    <option>
+      <li>Open</li>
+    </option>
+    <option>
+      <li>Close</li>
+    </option>
+  </select>
+    <span>Select Status</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+
+  <div class="button_cont" align="center"><a class="example_b"style="text-decoration: none;height: 0px;"><p style="margin-top: -14%;">SUBMIT</p></a></div>
+
+</ul>
+</div>
+
+</div> 
+</body>
+</html>

@@ -1,0 +1,1105 @@
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.util.Properties;
+
+import org.apache.commons.lang3.StringUtils;
+import org.hibernate.Session;
+import com.jcraft.jsch.ChannelExec;
+import com.jcraft.jsch.JSch;
+import com.jcraft.jsch.*;
+import java.io.IOException;
+import java.io.InputStream;
+import java.net.URL;
+import java.net.URLConnection;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.concurrent.ExecutorService; 
+import java.util.concurrent.Executors;
+
+
+
+import org.apache.commons.lang3.StringUtils;
+
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.boot.Metadata;
+import org.hibernate.boot.MetadataSources;
+import org.hibernate.boot.registry.StandardServiceRegistry;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import bean.*;
+
+
+
+ 
+
+ class SSHReadFileTest implements Runnable {
+	
+	private String ip,username,password,name,sourceIp;
+	private static SessionFactory factory;
+	static String command = "ping inet google.com count 3";//google
+	static String command1 = "ping inet facebook.com count 3";//facebook
+	static String command2 = "ping inet yahoo.com count 3";//yahoo
+	static String command3 = "ping inet gmail.com count 3";//gmail
+	static String command4 = "ping inet whatsapp.com count 3";//whatsapp
+	static String command5 = "ping inet cricbuzz.com count 3";//cricbuzz
+	static String command6= "ping inet 216.58.196.206 count 3";//youtube
+	static String command7= "ping inet wikipedia.org count 3";//wikipedia
+	static String command8= "ping inet naukri.com count 3";//naukri
+	static String command9= "ping inet wikimedia.org count 3";//wekemedia
+	static String command10= "ping inet axisbank.com count 3";//axisbank
+	static String command11 = "ping inet hdfcbank.com count 3";//hdfcbank
+	static String command12= "ping inet amazon.com count 3";//amazon
+	static String command13= "ping inet makemytrip.com count 3";//makemytrip
+	static String command14= "ping inet www.moneycontrol.com count 3";//moneycontrol
+	static String command15= "ping inet 115.110.175.62 count 3";//netflix
+	static String command16= "ping inet 23.66.249.197 count 3";//hotstar
+	static String command17= "ping inet 13.35.189.50 count 3";//altbalaji
+	static String command18= "ping inet 23.15.34.99 count 3";//zee5
+	static String command19= "ping inet www.viu.com count 3";//viu
+	static String command20= "ping inet 13.35.189.49 count 3";//spuul
+	static String command21= "ping inet 13.35.189.114 count 3";//hooq
+	static String command22= "ping inet 104.75.251.187 count 3";//erosnow
+	static String command23= "ping inet 23.57.115.81 count 3";//sonyliv
+	static String command24= "ping inet 23.15.34.106 count 3";//voot
+	static String command25= "ping inet www.instagram.com count 3";//instagram
+	static String command26= "ping inet 117.18.237.70 count 3";//twitter
+	static String command27= "ping inet m.facebook.com count 3";
+	static String command28= "ping inet www.rediff.com count 3";
+	static String command29= "ping inet www.ea.com count 3";
+	static String command30= "ping inet www.razorpay.com count 3";
+	static String command31 = "ping inet www.pubg.com count 3";
+	static String command32= "ping inet www.rummycircle.com count 3";
+	static String command33= "ping inet www.supercell.com count 3";
+	static String command34= "ping inet www.dccomics.com count 3";
+	static String command35= "ping inet www.primevideo.com count 3";
+	static String command36= "ping inet www.tiktok.com count 3";
+	static String command37= "ping inet www.smule.com count 3";
+	static String command38= "ping inet www.zomato.com count 3";
+	static String command39= "ping inet www.swiggy.com count 3";
+	static String command40= "ping inet www.ubereats.com count 3";
+	static String command41= "ping inet www.olacabs.com count 3";
+	static String command42= "ping inet www.uber.com count 3";
+	static String command43= "ping inet www.mobikwik.com count 3";
+	static String command44= "ping inet www.indianbank.net.in count 3";
+	static String command45= "ping inet www.tnb.in count 3";
+	static String command46= "ping inet 104.85.79.124 count 3";//icici
+	static String command47= "ping inet www.paytmbank.com count 3";
+	static String command48= "ping inet www.unitedbankofindia.com count 3";
+	static String command49= "ping inet www.amazonpay.in count 3";
+	static String command50= "ping inet www.ccavenue.com count 3";
+	static String command51 = "ping inet www.freecharge.com count 3";
+	static String command52= "ping inet www.zapak.com count 3";
+	static String command53= "ping inet www.game-guru.com count 3";
+	static String command54= "ping inet www.online.citibank.co.in count 3";
+	static String command55= "ping inet www.mpulsemobile.com count 3";
+	static String command56= "ping inet www.kvb.co.in count 3";
+	static String command57= "ping inet www.vijayabank.com count 3";
+	static String command58= "ping inet www.corpbank.com count 3";
+	static String command59= "ping inet www.sc.com count 3";
+	static String command60= "ping inet www.pmcbank.com count 3";
+	static String command61= "ping inet www.billdesk.com count 3";
+	static String command62= "ping inet www.rupay.co.in count 3";
+	
+	//for MP
+				static String commandmp = "ping inet google.com count 3";
+                static String commandmp1 = "ping inet 157.240.16.35 count 3";
+                static String commandmp2 = "ping inet yahoo.com count 3";
+                static String commandmp3 = "ping inet gmail.com count 3";
+                static String commandmp4 = "ping inet 31.13.79.53 count 3";
+                static String commandmp5 = "ping inet cricbuzz.com count 3";
+                static String commandmp6= "ping inet 172.217.167.14 count 3";//youtube
+                static String commandmp7= "ping inet wikipedia.org count 3";
+                static String commandmp8= "ping inet naukri.com count 3";
+                static String commandmp9= "ping inet wikimedia.org count 3";
+                static String commandmp10= "ping inet 23.76.148.99 count 3";
+                static String commandmp11 = "ping inet 104.16.107.2 count 3";
+                static String commandmp12= "ping inet amazon.com count 3";
+                static String commandmp13= "ping inet makemytrip.com count 3";
+                static String commandmp14= "ping inet 23.35.45.189 count 3";
+                static String commandmp15= "ping inet 54.77.135.19 count 3";//netflix
+                static String commandmp16= "ping inet 23.47.112.197 count 3";//hotstar
+                static String commandmp17= "ping inet 13.35.189.103 count 3";//altbalaji
+                static String commandmp18= "ping inet 23.77.57.186 count 3";//zee5
+                static String commandmp19= "ping inet 13.35.189.43 count 3";
+                static String commandmp20= "ping inet 13.35.189.12 count 3";//spuul
+                static String commandmp21= "ping inet 13.35.189.114 count 3";//hooq
+                static String commandmp22= "ping inet 13.35.189.13 count 3";//erosnow
+                static String commandmp23= "ping inet 13.35.189.128 count 3";//sonyliv
+                static String commandmp24= "ping inet 118.215.159.194 count 3";//voot
+                static String commandmp25= "ping inet 157.240.16.174 count 3";
+                static String commandmp26= "ping inet 104.244.42.65 count 3";//twitter
+                static String commandmp27= "ping inet m.facebook.com count 3";
+                static String commandmp28= "ping inet www.rediff.com count 3";
+                static String commandmp29= "ping inet 122.252.139.188 count 3";
+                static String commandmp30= "ping inet 13.35.189.119 count 3";
+                static String commandmp31 = "ping inet 18.188.52.189 count 3";
+                static String commandmp32= "ping inet 13.35.189.27 count 3";
+                static String commandmp33= "ping inet 13.35.219.228 count 3";
+                static String commandmp34= "ping inet www.dccomics.com count 3";
+                static String commandmp35= "ping inet 185.53.179.29 count 3";
+                static String commandmp36= "ping inet 23.15.34.35 count 3";
+                static String commandmp37= "ping inet www.smule.com count 3";
+                static String commandmp38= "ping inet www.zomato.com count 3";
+                static String commandmp39= "ping inet www.swiggy.com count 3";
+                static String commandmp40= "ping inet www.ubereats.com count 3";
+                static String commandmp41= "ping inet www.olacabs.com count 3";
+                static String commandmp42= "ping inet www.uber.com count 3";
+                static String commandmp43= "ping inet 180.179.23.136 count 3";
+                static String commandmp44= "ping inet 69.172.201.153 count 3";
+                static String commandmp45= "ping inet 104.24.17.35 count 3";
+                static String commandmp46= "ping inet 104.85.79.124 count 3";//icici
+                static String commandmp47= "ping inet 104.121.247.61 count 3";
+                static String commandmp48= "ping inet 103.115.194.41 count 3";
+                static String commandmp49= "ping inet 52.94.220.251 count 3";
+                static String commandmp50= "ping inet 104.108.193.229 count 3";
+                static String commandmp51 = "ping inet www.freecharge.com count 3";
+                static String commandmp52= "ping inet 14.192.18.211 count 3";
+                static String commandmp53= "ping inet 65.39.205.54 count 3";
+                static String commandmp54= "ping inet 104.108.202.237 count 3";
+                static String commandmp55= "ping inet www.mpulsemobile.com count 3";
+                static String commandmp56= "ping inet www.kvb.co.in count 3";
+                static String commandmp57= "ping inet www.vijayabank.com count 3";
+                static String commandmp58= "ping inet www.corpbank.com count 3";
+                static String commandmp59= "ping inet 104.120.75.208 count 3";
+                static String commandmp60= "ping inet www.pmcbank.com count 3";
+                static String commandmp61= "ping inet www.billdesk.com count 3";
+                static String commandmp62= "ping inet www.rupay.co.in count 3";
+
+
+	//for Mohali
+                
+static String commandmoh = "ping inet google.com count 3";
+static String commandmoh1 = "ping inet 157.240.16.35 count 3";
+static String commandmoh2 = "ping inet yahoo.com count 3";
+static String commandmoh3 = "ping inet gmail.com count 3";
+static String commandmoh4 = "ping inet 31.13.79.53 count 3";
+static String commandmoh5 = "ping inet cricbuzz.com count 3";
+static String commandmoh6= "ping inet 216.58.196.206 count 3";
+static String commandmoh7= "ping inet wikipedia.org count 3";
+static String commandmoh8= "ping inet naukri.com count 3";
+static String commandmoh9= "ping inet wikimedia.org count 3";
+static String commandmoh10= "ping inet 23.76.148.99 count 3";
+static String commandmoh11 = "ping inet 104.16.107.25 count 3";
+static String commandmoh12= "ping inet amazon.com count 3";
+static String commandmoh13= "ping inet makemytrip.com count 3";
+static String commandmoh14= "ping inet 23.35.45.189 count 3";
+static String commandmoh15= "ping inet 115.110.175.62 count 3";//
+static String commandmoh16= "ping inet 23.66.249.197 count 3";
+static String commandmoh17= "ping inet 13.35.189.50 count 3";
+static String commandmoh18= "ping inet 23.15.34.99 count 3";
+static String commandmoh19= "ping inet 13.35.189.43 count 3";
+static String commandmoh20= "ping inet 13.35.189.49 count 3";
+static String commandmoh21= "ping inet 13.35.189.114 count 3";//
+static String commandmoh22= "ping inet 104.75.251.187 count 3";
+static String commandmoh23= "ping inet 23.57.115.81 count 3";
+static String commandmoh24= "ping inet 23.15.34.106 count 3";
+static String commandmoh25= "ping inet 157.240.16.174 count 3";
+static String commandmoh26= "ping inet 117.18.237.70 count 3";
+static String commandmoh27= "ping inet m.facebook.com count 3";
+static String commandmoh28= "ping inet www.rediff.com count 3";
+static String commandmoh29= "ping inet 122.252.139.188 count 3";
+static String commandmoh30= "ping inet 13.35.189.119 count 3";
+static String commandmoh31 = "ping inet 18.188.52.189 count 3";
+static String commandmoh32= "ping inet www.rummycircle.com count 3";
+static String commandmoh33= "ping inet 13.35.219.228 count 3";
+static String commandmoh34= "ping inet www.dccomics.com count 3";
+static String commandmoh35= "ping inet www.primevideo.com count 3";
+static String commandmoh36= "ping inet 23.15.34.35 count 3";
+static String commandmoh37= "ping inet www.smule.com count 3";
+static String commandmoh38= "ping inet www.zomato.com count 3";
+static String commandmoh39= "ping inet www.swiggy.com count 3";
+static String commandmoh40= "ping inet www.ubereats.com count 3";
+static String commandmoh41= "ping inet www.olacabs.com count 3";
+static String commandmoh42= "ping inet www.uber.com count 3";
+static String commandmoh43= "ping inet 180.179.23.136 count 3";
+static String commandmoh44= "ping inet www.indianbank.net.in count 3";
+static String commandmoh45= "ping inet 104.24.17.35 count 3";
+static String commandmoh46= "ping inet 104.85.79.124 count 3";//icici
+static String commandmoh47= "ping inet 104.121.247.61 count 3";
+static String commandmoh48= "ping inet 103.115.194.41 count 3";
+static String commandmoh49= "ping inet www.amazonpay.in count 3";
+static String commandmoh50= "ping inet 104.108.193.229 count 3";
+static String commandmoh51 = "ping inet www.freecharge.com count 3";
+static String commandmoh52= "ping inet 14.192.18.211 count 3";
+static String commandmoh53= "ping inet 65.39.205.54 count 3";
+static String commandmoh54= "ping inet 104.108.202.237 count 3";
+static String commandmoh55= "ping inet www.mpulsemobile.com count 3";
+static String commandmoh56= "ping inet www.kvb.co.in count 3";
+static String commandmoh57= "ping inet www.vijayabank.com count 3";
+static String commandmoh58= "ping inet www.corpbank.com count 3";
+static String commandmoh59= "ping inet 104.120.75.208 count 3";
+static String commandmoh60= "ping inet www.pmcbank.com count 3";
+static String commandmoh61= "ping inet www.billdesk.com count 3";
+static String commandmoh62= "ping inet www.rupay.co.in count 3";
+
+	
+	// for Kolkata
+static String commandkol = "ping inet google.com count 3";
+static String commandkol1 = "ping inet 157.240.16.20 count 3";
+static String commandkol2 = "ping inet yahoo.com count 3";
+static String commandkol3 = "ping inet gmail.com count 3";
+static String commandkol4 = "ping inet 157.240.16.52 count 3";
+static String commandkol5 = "ping inet cricbuzz.com count 3";
+static String commandkol6= "ping inet 172.217.167.150 count 3";
+static String commandkol7= "ping inet wikipedia.org count 3";
+static String commandkol8= "ping inet naukri.com count 3";
+static String commandkol9= "ping inet wikimedia.org count 3";
+static String commandkol10= "ping inet 104.122.0.186 count 3";
+static String commandkol11 = "ping inet 104.16.107.25 count 3";
+static String commandkol12= "ping inet amazon.com count 3";
+static String commandkol13= "ping inet makemytrip.com count 3";
+static String commandkol14= "ping inet 172.217.163.66 count 3";
+static String commandkol15= "ping inet 172.217.163.68 count 3";//
+static String commandkol16= "ping inet 172.217.163.166 count 3";
+static String commandkol17= "ping inet 52.222.176.224 count 3";
+static String commandkol18= "ping inet 172.217.163.194 count 3";
+static String commandkol19= "ping inet 52.222.176.66 count 3";
+static String commandkol20= "ping inet 52.222.176.160 count 3";
+static String commandkol21= "ping inet 13.35.189.114 count 3";//
+static String commandkol22= "ping inet 152.199.39.222 count 3";
+static String commandkol23= "ping inet 52.222.188.84 count 3";
+static String commandkol24= "ping inet 157.24.16.35 count 3";
+static String commandkol25= "ping inet 157.240.16.174 count 3";
+static String commandkol26= "ping inet 192.229.237.96 count 3";
+static String commandkol27= "ping inet m.facebook.com count 3";
+static String commandkol28= "ping inet www.rediff.com count 3";
+static String commandkol29= "ping inet 118.215.154.176 count 3";
+static String commandkol30= "ping inet 52.222.176.105 count 3";
+static String commandkol31 = "ping inet 172.217.163.161 count 3";
+static String commandkol32= "ping inet 172.217.166.102 count 3";
+static String commandkol33= "ping inet 52.222.185.102 count 3";
+static String commandkol34= "ping inet www.dccomics.com count 3";
+static String commandkol35= "ping inet 52.222.187.197 count 3";
+static String commandkol36= "ping inet 23.200.239.184 count 3";
+static String commandkol37= "ping inet www.smule.com count 3";
+static String commandkol38= "ping inet www.zomato.com count 3";
+static String commandkol39= "ping inet www.swiggy.com count 3";
+static String commandkol40= "ping inet www.ubereats.com count 3";
+static String commandkol41= "ping inet www.olacabs.com count 3";
+static String commandkol42= "ping inet www.uber.com count 3";
+static String commandkol43= "ping inet 23.77.56.159 count 3";
+static String commandkol44= "ping inet 115.110.173.99 count 3";
+static String commandkol45= "ping inet 14.141.76.115 count 3";
+static String commandkol46= "ping inet 104.122.9.66 count 3";//icici
+static String commandkol47= "ping inet 104.121.247.61 count 3";
+static String commandkol48= "ping inet 103.115.194.41 count 3";
+static String commandkol49= "ping inet www.amazonpay.in count 3";
+static String commandkol50= "ping inet 104.108.193.229 count 3";
+static String commandkol51 = "ping inet www.freecharge.com count 3";
+static String commandkol52= "ping inet 182.161.72.135 count 3";
+static String commandkol53= "ping inet 172.217.166.98 count 3";
+static String commandkol54= "ping inet 23.10.45.34 count 3";
+static String commandkol55= "ping inet www.mpulsemobile.com count 3";
+static String commandkol56= "ping inet www.kvb.co.in count 3";
+static String commandkol57= "ping inet www.vijayabank.com count 3";
+static String commandkol58= "ping inet www.corpbank.com count 3";
+static String commandkol59= "ping inet 23.207.129.140 count 3";
+static String commandkol60= "ping inet www.pmcbank.com count 3";
+static String commandkol61= "ping inet www.billdesk.com count 3";
+static String commandkol62= "ping inet www.rupay.co.in count 3";
+
+// for lucknow
+static String commandlko = "ping inet google.com count 3";
+static String commandlko1 = "ping inet 157.240.16.35 count 3";
+static String commandlko2 = "ping inet yahoo.com count 3";
+static String commandlko3 = "ping inet gmail.com count 3";
+static String commandlko4 = "ping inet 157.240.16.52 count 3";
+static String commandlko5 = "ping inet cricbuzz.com count 3";
+static String commandlko6= "ping inet 172.217.166.14 count 3";
+static String commandlko7= "ping inet wikipedia.org count 3";
+static String commandlko8= "ping inet naukri.com count 3";
+static String commandlko9= "ping inet wikimedia.org count 3";
+static String commandlko10= "ping inet 23.51.140.210 count 3";
+static String commandlko11 = "ping inet 104.16.108.25 count 3";
+static String commandlko12= "ping inet amazon.com count 3";
+static String commandlko13= "ping inet makemytrip.com count 3";
+static String commandlko14= "ping inet 104.85.65.168 count 3";
+static String commandlko15= "ping inet 172.217.163.66 count 3";//
+static String commandlko16= "ping inet 23.76.157.35 count 3";
+static String commandlko17= "ping inet 13.35.189.79 count 3";
+static String commandlko18= "ping inet 23.76.157.43 count 3";
+static String commandlko19= "ping inet 13.35.189.31 count 3";
+static String commandlko20= "ping inet 104.18.74.113 count 3";
+static String commandlko21= "ping inet 13.35.189.114 count 3";//
+static String commandlko22= "ping inet 13.35.189.86 count 3";
+static String commandlko23= "ping inet 13.35.189.128 count 3";
+static String commandlko24= "ping inet 104.20.170.45 count 3";
+static String commandlko25= "ping inet 157.240.16.174 count 3";
+static String commandlko26= "ping inet 104.244.42.129 count 3";
+static String commandlko27= "ping inet 157.240.16.35 count 3";
+static String commandlko28= "ping inet www.rediff.com count 3";
+static String commandlko29= "ping inet 104.108.159.122 count 3";
+static String commandlko30= "ping inet 13.35.189.52 count 3";
+static String commandlko31 = "ping inet 172.217.166.98 count 3";
+static String commandlko32= "ping inet 13.35.189.112 count 3";
+static String commandlko33= "ping inet 13.35.189.126 count 3";
+static String commandlko34= "ping inet www.dccomics.com count 3";
+static String commandlko35= "ping inet 13.35.219.200 count 3";
+static String commandlko36= "ping inet 23.15.34.66 count 3";//
+static String commandlko37= "ping inet www.smule.com count 3";
+static String commandlko38= "ping inet www.zomato.com count 3";
+static String commandlko39= "ping inet www.swiggy.com count 3";
+static String commandlko40= "ping inet www.ubereats.com count 3";
+static String commandlko41= "ping inet www.olacabs.com count 3";
+static String commandlko42= "ping inet www.uber.com count 3";
+static String commandlko43= "ping inet 180.179.23.136 count 3";
+static String commandlko44= "ping inet 115.110.173.99 count 3";
+static String commandlko45= "ping inet 14.141.76.115 count 3";
+static String commandlko46= "ping inet 184.84.202.21 count 3";//icici
+static String commandlko47= "ping inet 184.84.108.147 count 3";
+static String commandlko48= "ping inet 103.115.194.41 count 3";
+static String commandlko49= "ping inet 13.35.216.125 count 3";
+static String commandlko50= "ping inet 104.108.193.229 count 3";
+static String commandlko51 = "ping inet www.freecharge.com count 3";
+static String commandlko52= "ping inet 14.192.18.211 count 3";
+static String commandlko53= "ping inet 104.25.244.102 count 3";
+static String commandlko54= "ping inet 104.108.202.237 count 3";
+static String commandlko55= "ping inet www.mpulsemobile.com count 3";
+static String commandlko56= "ping inet www.kvb.co.in count 3";
+static String commandlko57= "ping inet www.vijayabank.com count 3";
+static String commandlko58= "ping inet www.corpbank.com count 3";
+static String commandlko59= "ping inet 104.120.75.208 count 3";
+static String commandlko60= "ping inet www.pmcbank.com count 3";
+static String commandlko61= "ping inet www.billdesk.com count 3";
+static String commandlko62= "ping inet www.rupay.co.in count 3";
+
+//for chennai
+
+//for noida
+
+	
+	//static String cli="cli";
+	
+	
+	public SSHReadFileTest()
+	{
+		
+		StandardServiceRegistry ssr = new StandardServiceRegistryBuilder().configure("resource/hibernate.cfg3.xml").build();  
+        
+	 	   Metadata meta = new MetadataSources(ssr).getMetadataBuilder().build();  
+	 	  
+	 	  factory= meta.getSessionFactoryBuilder().build();
+	 	 
+	}
+	
+	SSHReadFileTest(String ip,String username,String password,String name,String sourceIp){
+		this.ip=ip;
+		this.username=username;
+		this.password=password;
+		this.name=name;
+		this.sourceIp=sourceIp;
+	} 
+	
+	
+	public static String checkCondition(String newValue,String oldValue) {
+		double newvalue = Double.parseDouble(newValue);
+		double oldvalue = Double.parseDouble(oldValue.replace("not ok", "").replace("ok", ""));
+		if(oldvalue>200.0) {
+		double result=0.0;
+		if(newvalue>oldvalue) {
+		double diff=newvalue-oldvalue;
+			result = diff/newvalue;
+			result = result * 100;
+		}
+		if(result>30.0) {
+			return Math.round(newvalue)+"not ok";
+		}
+		else {
+				return Math.round(newvalue)+"ok";
+		}	
+		}
+		else {
+			double result=0.0;
+			if(newvalue>oldvalue) {
+			result=newvalue-oldvalue;
+			}
+			if(result>30.0) {
+				return Math.round(newvalue)+"not ok";
+			}
+			else {
+					return Math.round(newvalue)+"ok";
+			}	
+		}
+	}
+	
+	public static String save(String brasName,String google,String facebook,String yahoo,String gmail,String whatsapp,String cricbuzz,String youtube,String wekepedia,String naukri,String wekemedia,String axisbank,String hdfcbank,String amazon,String makemytrip,String moneycontrol,
+			String netflix,String hotstar,String altbalaji,String zee5,String viu,String spuul,String hooq,String erosnow,String sonyliv,String voot,String instagram,String twitter ,String mfacebook,String rediff,String ea,String razorpay,String pubg,String rummycircle,String supercell,String dccomics,String primevideo,String tiktok,String smule,String zomato,String swiggy,String ubereats,String olacabs,String uber,String mobikwik,
+			String indianbank,String tamilnadumercentile,String icicibank,String paytmbank,String unitedbank,String amazonpay,String ccavenue,String freecharge,String zapak,String gameguru,String citibank,String mpulse,String karuryyasa,String vijayabank,String corporationbank,String standarchartered,String punjabmaharashtrabank,String billdesk,String rupaybank)
+    {
+    	
+    	Session session1 = factory.openSession();
+    	Session session2 = factory.openSession();
+    	StoreLatencyDatas stget=session2.get(StoreLatencyDatas.class, brasName);
+    	String google_store=checkCondition(google,stget.getGoogle());
+    	String facebook_store=checkCondition(facebook,stget.getFacebook());
+    	String yahoo_store=checkCondition(yahoo,stget.getYahoo());
+    	String gmail_store=checkCondition(gmail,stget.getGmail());
+    	String whatsapp_store=checkCondition(whatsapp,stget.getWhatsapp());
+    	String cricbuzz_store=checkCondition(cricbuzz,stget.getCricbuzz());
+    	String wekepedia_store=checkCondition(wekepedia,stget.getWekepedia());
+    	String youtube_store=checkCondition(youtube,stget.getYoutube());
+    	String naukri_store=checkCondition(naukri,stget.getNaukri());
+    	String wekemedia_store=checkCondition(wekemedia,stget.getWekemedia());
+    	String axisbank_store=checkCondition(axisbank,stget.getAxisbank());
+    	String hdfcbank_store=checkCondition(hdfcbank,stget.getHdfcbank());
+    	String amazon_store=checkCondition(amazon,stget.getAmazon());
+    	String makemytrip_store=checkCondition(makemytrip,stget.getMakemytrip());
+    	String moneycontrol_store=checkCondition(moneycontrol,stget.getMoneycontrol());
+    	String netflix_store=checkCondition(netflix,stget.getNetflix());
+    	String hotstar_store=checkCondition(hotstar,stget.getHotstar());
+    	String altbalaji_store=checkCondition(altbalaji,stget.getAltbalaji());
+    	String zee5_store=checkCondition(zee5,stget.getZee5());
+    	String viu_store=checkCondition(viu,stget.getViu());
+    	String spuul_store=checkCondition(spuul,stget.getSpuul());
+    	String hooq_store=checkCondition(hooq,stget.getHooq());
+    	String erosnow_store=checkCondition(erosnow,stget.getErosnow());
+    	String sonyliv_store=checkCondition(sonyliv,stget.getSonyliv());
+    	String voot_store=checkCondition(voot,stget.getVoot());
+    	String instagram_store=checkCondition(instagram,stget.getInstagram());
+    	String twitter_store=checkCondition(twitter,stget.getTwitter());
+    	String mfacebook_store=checkCondition(mfacebook,stget.getMfacebook());
+    	String rediff_store=checkCondition(rediff,stget.getRediff());
+    	String ea_store=checkCondition(ea,stget.getEa());
+    	String razorpay_store=checkCondition(razorpay,stget.getRazorpay());
+    	String pubg_store=checkCondition(pubg,stget.getPubg());
+    	String rummycircle_store=checkCondition(rummycircle,stget.getRummycircle());
+    	String supercell_store=checkCondition(supercell,stget.getSupercell());
+    	String dccomics_store=checkCondition(dccomics,stget.getDccomics());
+    	String primevideo_store=checkCondition(primevideo,stget.getPrimevideo());
+    	String tiktok_store=checkCondition(tiktok,stget.getTiktok());
+    	String smule_store=checkCondition(smule,stget.getSmule());
+    	String zomato_store=checkCondition(zomato,stget.getZomato());
+    	String swiggy_store=checkCondition(swiggy,stget.getSwiggy());
+    	String ubereats_store=checkCondition(ubereats,stget.getUbereats());
+    	String olacabs_store=checkCondition(olacabs,stget.getOlacabs());
+    	String uber_store=checkCondition(erosnow,stget.getUber());
+    	String mobikwik_store=checkCondition(mobikwik,stget.getMobikwik());
+    	
+    	String indianbank_store=checkCondition(indianbank,stget.getIndianbank());
+    	String tamilnadumercentile_store=checkCondition(tamilnadumercentile,stget.getTamilnadumercentile());
+    	String icicibank_store=checkCondition(icicibank,stget.getIcicibank());
+    	String paytmbank_store=checkCondition(paytmbank,stget.getHdfcbank());
+    	String unitedbank_store=checkCondition(unitedbank,stget.getUnitedbank());
+    	String amazonpay_store=checkCondition(amazonpay,stget.getAmazonpay());
+    	String ccavenue_store=checkCondition(ccavenue,stget.getCcavenue());
+    	String freecharge_store=checkCondition(freecharge,stget.getFreecharge());
+    	String zapak_store=checkCondition(zapak,stget.getZapak());
+    	String gameguru_store=checkCondition(gameguru,stget.getGameguru());
+    	String citibank_store=checkCondition(citibank,stget.getCitibank());
+    	String mpulse_store=checkCondition(mpulse,stget.getMpulse());
+    	String karuryyasa_store=checkCondition(karuryyasa,stget.getKaruryyasa());
+    	String vijayabank_store=checkCondition(vijayabank,stget.getVijayabank());
+    	String corporationbank_store=checkCondition(corporationbank,stget.getCorporationbank());
+    	String standarchartered_store=checkCondition(standarchartered,stget.getStandarchartered());
+    	String punjabmaharashtrabank_store=checkCondition(punjabmaharashtrabank,stget.getPunjabmaharashtrabank());
+    	String billdesk_store=checkCondition(billdesk,stget.getBilldesk());
+    	String rupaybank_store=checkCondition(rupaybank,stget.getRupaybank());
+    	
+    	
+    	
+    	
+    	
+    	
+    	
+		Transaction t = session1.beginTransaction(); 
+		
+		StoreLatencyDatas st=new StoreLatencyDatas();    
+     	st.setBrasName(brasName);
+		st.setGoogle(google_store);
+		st.setFacebook(facebook_store);
+		st.setYahoo(yahoo_store);
+		st.setGmail(gmail_store);
+		st.setWhatsapp(whatsapp_store);
+		st.setCricbuzz(cricbuzz_store);
+		st.setWekepedia(wekepedia_store);
+		st.setYoutube(youtube_store);
+		st.setNaukri(naukri_store);
+		st.setWekemedia(wekemedia_store);
+		st.setAxisbank(axisbank_store);
+		st.setHdfcbank(hdfcbank_store);
+		st.setAmazon(amazon_store);
+		st.setMakemytrip(makemytrip_store);
+		st.setMoneycontrol(moneycontrol_store);
+		st.setNetflix(netflix_store);
+		st.setHotstar(hotstar_store);
+		st.setAltbalaji(altbalaji_store);
+		st.setZee5(zee5_store);
+		st.setViu(viu_store);
+		st.setSpuul(spuul_store);
+		st.setHooq(hooq_store);
+		st.setErosnow(erosnow_store);
+		st.setSonyliv(sonyliv_store);
+		st.setVoot(voot_store);
+		st.setInstagram(instagram_store);
+		st.setTwitter(twitter_store);
+		st.setMfacebook(mfacebook_store);
+		st.setRediff(rediff_store);
+		st.setEa(ea_store);
+		st.setRazorpay(razorpay_store);
+		st.setPubg(pubg_store);
+		st.setRummycircle(rummycircle_store);
+		st.setSupercell(supercell_store);
+		st.setDccomics(dccomics_store);
+		st.setPrimevideo(primevideo_store);
+		st.setTiktok(tiktok_store);
+		st.setSmule(smule_store);
+		st.setZomato(zomato_store);
+		st.setSwiggy(swiggy_store);
+		st.setUbereats(ubereats_store);
+		st.setOlacabs(olacabs_store);
+		st.setUber(uber_store);
+		st.setMobikwik(mobikwik_store);
+		st.setIndianbank(indianbank_store);
+		st.setTamilnadumercentile(tamilnadumercentile_store);
+		st.setIcicibank(icicibank_store);
+		st.setPaytmbank(paytmbank_store);
+		st.setUnitedbank(unitedbank_store);
+		st.setAmazonpay(amazonpay_store);
+		st.setCcavenue(ccavenue_store);
+		st.setFreecharge(freecharge_store);
+		st.setZapak(zapak_store);
+		st.setGameguru(gameguru_store);
+		st.setCitibank(citibank_store);
+		st.setMpulse(mpulse_store);
+		st.setKaruryyasa(karuryyasa_store);
+		st.setVijayabank(vijayabank_store);
+		st.setCorporationbank(corporationbank_store);
+		st.setStandarchartered(standarchartered_store);
+		st.setPunjabmaharashtrabank(punjabmaharashtrabank_store);
+		st.setBilldesk(billdesk_store);
+		st.setRupaybank(rupaybank_store);
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		Date date=new Date();
+		SimpleDateFormat formatter = new SimpleDateFormat("dd-MMMM-yyyy HH:mm:ss");  
+		    String strDate = formatter.format(date);
+		st.setBras_date(strDate.toString());
+	
+		
+		    session1.update(st);  
+		    t.commit();  
+		    
+		    System.out.println("successfully saved");    
+		    session2.close();
+		    session1.close(); 
+		 
+		  
+		        return "successfully saved";
+    }
+	public void getData(String ip,String username,String password,String name,String sourceIp) {
+		
+		String avg_google_del4,avg_facebook_del4,avg_yahoo_del4,avg_gmail_del4,avg_whatsapp_del4,avg_cricbuzz_del4,avg_youtube_del4,avg_wikipedia_del4,avg_axisbank_del4,avg_hdfcbank_del4,avg_naukri_del4,avg_wikimedia_del4,avg_amazon_del4,avg_makemytrip_del4,avg_moneycontrol_del4,
+		avg_netflix_del4,avg_hotstar_del4,avg_altbalaji_del4,avg_zee5_del4,avg_viu_del4,avg_spuul_del4,avg_hooq_del4,avg_erosnow_del4,avg_sonyliv_del4,avg_voot_del4,avg_instagram_del4,avg_twitter_del4,avg_mfacebook_del4,avg_rediff_del4,avg_ea_del4,avg_razorpay_del4,avg_pubg_del4,avg_rummycircle_del4,avg_supercell_del4,avg_dccomics_del4,avg_primevideo_del4,avg_tiktok_del4,avg_smule_del4,avg_zomato_del4,avg_swiggy_del4,avg_ubereats_del4,avg_olacabs_del4,avg_uber_del4,avg_mobikwik_del4,
+		avg_indianbank_del4,avg_tamilnadumercentile_del4,avg_icicibank_del4,avg_paytmbank_del4,avg_unitedbank_del4,avg_amazonpay_del4,avg_ccavenue_del4,avg_freecharge_del4,avg_zapak_del4,avg_gameguru_del4,avg_citibank_del4,avg_mpulse_del4,avg_karuryyasa_del4,avg_vijayabank_del4,avg_corporationbank_del4,avg_standarchartered_del4,avg_punjabmaharashtrabank_del4,avg_billdesk_del4,avg_rupaybank_del4;
+		
+		SSHReadFileTest ssh=new SSHReadFileTest();
+		try {
+			
+			
+			com.jcraft.jsch.Session session=ssh.getConection(ip, username, password);
+			
+			
+			if(ip.equalsIgnoreCase("10.227.199.147") || ip.equalsIgnoreCase("10.227.199.152")) {
+				avg_google_del4=ssh.executeCommand(commandmp+" "+sourceIp, session);
+			    avg_facebook_del4=ssh.executeCommand(commandmp1+" "+sourceIp, session);
+			     avg_yahoo_del4=ssh.executeCommand(commandmp2+" "+sourceIp, session);
+			   avg_gmail_del4=ssh.executeCommand(commandmp3+" "+sourceIp, session);
+			    avg_whatsapp_del4=ssh.executeCommand(commandmp4+" "+sourceIp, session);
+			    avg_cricbuzz_del4=ssh.executeCommand(commandmp5+" "+sourceIp, session);
+			    avg_youtube_del4=ssh.executeCommand(commandmp6+" "+sourceIp, session);
+			   avg_wikipedia_del4=ssh.executeCommand(commandmp7+" "+sourceIp, session);
+			    avg_naukri_del4=ssh.executeCommand(commandmp8+" "+sourceIp, session);
+			    avg_wikimedia_del4=ssh.executeCommand(commandmp9+" "+sourceIp, session);
+			    avg_axisbank_del4=ssh.executeCommand(commandmp10+" "+sourceIp, session);
+			     avg_hdfcbank_del4=ssh.executeCommand(commandmp11+" "+sourceIp, session);
+			    avg_amazon_del4=ssh.executeCommand(commandmp12+" "+sourceIp, session);
+			    avg_makemytrip_del4=ssh.executeCommand(commandmp13+" "+sourceIp, session);
+			    avg_moneycontrol_del4=ssh.executeCommand(commandmp14+" "+sourceIp, session);
+			    avg_netflix_del4=ssh.executeCommand(commandmp15+" "+sourceIp, session);
+			    avg_hotstar_del4=ssh.executeCommand(commandmp16+" "+sourceIp, session);
+			    avg_altbalaji_del4=ssh.executeCommand(commandmp17+" "+sourceIp, session);
+			    avg_zee5_del4=ssh.executeCommand(commandmp18+" "+sourceIp, session);
+			    avg_viu_del4=ssh.executeCommand(commandmp19+" "+sourceIp, session);
+			    avg_spuul_del4=ssh.executeCommand(commandmp20+" "+sourceIp, session);
+			    avg_hooq_del4=ssh.executeCommand(commandmp21+" "+sourceIp, session);
+			    avg_erosnow_del4=ssh.executeCommand(commandmp22+" "+sourceIp, session);
+			    avg_sonyliv_del4=ssh.executeCommand(commandmp23+" "+sourceIp, session);
+			    avg_voot_del4=ssh.executeCommand(commandmp24+" "+sourceIp, session);
+			    avg_instagram_del4=ssh.executeCommand(commandmp25+" "+sourceIp, session);
+			    
+			    
+			    	avg_twitter_del4=ssh.executeCommand(commandmp26+" "+sourceIp, session);
+				   avg_mfacebook_del4=ssh.executeCommand(commandmp27+" "+sourceIp, session);
+				    avg_rediff_del4=ssh.executeCommand(commandmp28+" "+sourceIp, session);
+				    avg_ea_del4=ssh.executeCommand(commandmp29+" "+sourceIp, session);
+				    avg_razorpay_del4=ssh.executeCommand(commandmp30+" "+sourceIp, session);
+				     avg_pubg_del4=ssh.executeCommand(commandmp31+" "+sourceIp, session);
+				    avg_rummycircle_del4=ssh.executeCommand(commandmp32+" "+sourceIp, session);
+				    avg_supercell_del4=ssh.executeCommand(commandmp33+" "+sourceIp, session);
+				    avg_dccomics_del4=ssh.executeCommand(commandmp34+" "+sourceIp, session);
+				    avg_primevideo_del4=ssh.executeCommand(commandmp35+" "+sourceIp, session);
+				    avg_tiktok_del4=ssh.executeCommand(commandmp36+" "+sourceIp, session);
+				    avg_smule_del4=ssh.executeCommand(commandmp37+" "+sourceIp, session);
+				    avg_zomato_del4=ssh.executeCommand(commandmp38+" "+sourceIp, session);
+				    avg_swiggy_del4=ssh.executeCommand(commandmp39+" "+sourceIp, session);
+				    avg_ubereats_del4=ssh.executeCommand(commandmp40+" "+sourceIp, session);
+				    avg_olacabs_del4=ssh.executeCommand(commandmp41+" "+sourceIp, session);
+				    avg_uber_del4=ssh.executeCommand(commandmp42+" "+sourceIp, session);
+				    avg_mobikwik_del4=ssh.executeCommand(commandmp43+" "+sourceIp, session);
+				    
+				    avg_indianbank_del4=ssh.executeCommand(commandmp44+" "+sourceIp, session);
+				    avg_tamilnadumercentile_del4=ssh.executeCommand(commandmp45+" "+sourceIp, session);
+				    avg_icicibank_del4=ssh.executeCommand(commandmp46+" "+sourceIp, session);
+				    avg_paytmbank_del4=ssh.executeCommand(commandmp47+" "+sourceIp, session);
+				    avg_unitedbank_del4=ssh.executeCommand(commandmp48+" "+sourceIp, session);
+				    avg_amazonpay_del4=ssh.executeCommand(commandmp49+" "+sourceIp, session);
+				    avg_ccavenue_del4=ssh.executeCommand(commandmp50+" "+sourceIp, session);
+				    avg_freecharge_del4=ssh.executeCommand(commandmp51+" "+sourceIp, session);
+				    avg_zapak_del4=ssh.executeCommand(commandmp52+" "+sourceIp, session);
+				    avg_gameguru_del4=ssh.executeCommand(commandmp53+" "+sourceIp, session);
+				    avg_citibank_del4=ssh.executeCommand(commandmp54+" "+sourceIp, session);
+				    avg_mpulse_del4=ssh.executeCommand(commandmp55+" "+sourceIp, session);
+				    avg_karuryyasa_del4=ssh.executeCommand(commandmp56+" "+sourceIp, session);
+				    avg_vijayabank_del4=ssh.executeCommand(commandmp57+" "+sourceIp, session);
+				    avg_corporationbank_del4=ssh.executeCommand(commandmp58+" "+sourceIp, session);
+				    avg_standarchartered_del4=ssh.executeCommand(commandmp59+" "+sourceIp, session);
+				    avg_punjabmaharashtrabank_del4=ssh.executeCommand(commandmp60+" "+sourceIp, session);
+				    avg_billdesk_del4=ssh.executeCommand(commandmp61+" "+sourceIp, session);
+				    avg_rupaybank_del4=ssh.executeCommand(commandmp62+" "+sourceIp, session);
+				
+			}else if(ip.equalsIgnoreCase("10.227.215.17")) {
+				avg_google_del4=ssh.executeCommand(commandmoh+" "+sourceIp, session);
+			    avg_facebook_del4=ssh.executeCommand(commandmoh1+" "+sourceIp, session);
+			     avg_yahoo_del4=ssh.executeCommand(commandmoh2+" "+sourceIp, session);
+			   avg_gmail_del4=ssh.executeCommand(commandmoh3+" "+sourceIp, session);
+			    avg_whatsapp_del4=ssh.executeCommand(commandmoh4+" "+sourceIp, session);
+			    avg_cricbuzz_del4=ssh.executeCommand(commandmoh5+" "+sourceIp, session);
+			    avg_youtube_del4=ssh.executeCommand(commandmoh6+" "+sourceIp, session);
+			   avg_wikipedia_del4=ssh.executeCommand(commandmoh7+" "+sourceIp, session);
+			    avg_naukri_del4=ssh.executeCommand(commandmoh8+" "+sourceIp, session);
+			    avg_wikimedia_del4=ssh.executeCommand(commandmoh9+" "+sourceIp, session);
+			    avg_axisbank_del4=ssh.executeCommand(commandmoh10+" "+sourceIp, session);
+			     avg_hdfcbank_del4=ssh.executeCommand(commandmoh11+" "+sourceIp, session);
+			    avg_amazon_del4=ssh.executeCommand(commandmoh12+" "+sourceIp, session);
+			    avg_makemytrip_del4=ssh.executeCommand(commandmoh13+" "+sourceIp, session);
+			    avg_moneycontrol_del4=ssh.executeCommand(commandmoh14+" "+sourceIp, session);
+			    avg_netflix_del4=ssh.executeCommand(commandmoh15+" "+sourceIp, session);
+			    avg_hotstar_del4=ssh.executeCommand(commandmoh16+" "+sourceIp, session);
+			    avg_altbalaji_del4=ssh.executeCommand(commandmoh17+" "+sourceIp, session);
+			    avg_zee5_del4=ssh.executeCommand(commandmoh18+" "+sourceIp, session);
+			    avg_viu_del4=ssh.executeCommand(commandmoh19+" "+sourceIp, session);
+			    avg_spuul_del4=ssh.executeCommand(commandmoh20+" "+sourceIp, session);
+			    avg_hooq_del4=ssh.executeCommand(commandmoh21+" "+sourceIp, session);
+			    avg_erosnow_del4=ssh.executeCommand(commandmoh22+" "+sourceIp, session);
+			    avg_sonyliv_del4=ssh.executeCommand(commandmoh23+" "+sourceIp, session);
+			    avg_voot_del4=ssh.executeCommand(commandmoh24+" "+sourceIp, session);
+			    avg_instagram_del4=ssh.executeCommand(commandmoh25+" "+sourceIp, session);
+			    
+			    	avg_twitter_del4=ssh.executeCommand(commandmoh26+" "+sourceIp, session);
+				   avg_mfacebook_del4=ssh.executeCommand(commandmoh27+" "+sourceIp, session);
+				    avg_rediff_del4=ssh.executeCommand(commandmoh28+" "+sourceIp, session);
+				    avg_ea_del4=ssh.executeCommand(commandmoh29+" "+sourceIp, session);
+				    avg_razorpay_del4=ssh.executeCommand(commandmoh30+" "+sourceIp, session);
+				     avg_pubg_del4=ssh.executeCommand(commandmoh31+" "+sourceIp, session);
+				    avg_rummycircle_del4=ssh.executeCommand(commandmoh32+" "+sourceIp, session);
+				    avg_supercell_del4=ssh.executeCommand(commandmoh33+" "+sourceIp, session);
+				    avg_dccomics_del4=ssh.executeCommand(commandmoh34+" "+sourceIp, session);
+				    avg_primevideo_del4=ssh.executeCommand(commandmoh35+" "+sourceIp, session);
+				    avg_tiktok_del4=ssh.executeCommand(commandmoh36+" "+sourceIp, session);
+				    avg_smule_del4=ssh.executeCommand(commandmoh37+" "+sourceIp, session);
+				    avg_zomato_del4=ssh.executeCommand(commandmoh38+" "+sourceIp, session);
+				    avg_swiggy_del4=ssh.executeCommand(commandmoh39+" "+sourceIp, session);
+				    avg_ubereats_del4=ssh.executeCommand(commandmoh40+" "+sourceIp, session);
+				    avg_olacabs_del4=ssh.executeCommand(commandmoh41+" "+sourceIp, session);
+				    avg_uber_del4=ssh.executeCommand(commandmoh42+" "+sourceIp, session);
+				    avg_mobikwik_del4=ssh.executeCommand(commandmoh43+" "+sourceIp, session);
+				    
+				    avg_indianbank_del4=ssh.executeCommand(commandmoh44+" "+sourceIp, session);
+				    avg_tamilnadumercentile_del4=ssh.executeCommand(commandmoh45+" "+sourceIp, session);
+				    avg_icicibank_del4=ssh.executeCommand(commandmoh46+" "+sourceIp, session);
+				    avg_paytmbank_del4=ssh.executeCommand(commandmoh47+" "+sourceIp, session);
+				    avg_unitedbank_del4=ssh.executeCommand(commandmoh48+" "+sourceIp, session);
+				    avg_amazonpay_del4=ssh.executeCommand(commandmoh49+" "+sourceIp, session);
+				    avg_ccavenue_del4=ssh.executeCommand(commandmoh50+" "+sourceIp, session);
+				    avg_freecharge_del4=ssh.executeCommand(commandmoh51+" "+sourceIp, session);
+				    avg_zapak_del4=ssh.executeCommand(commandmoh52+" "+sourceIp, session);
+				    avg_gameguru_del4=ssh.executeCommand(commandmoh53+" "+sourceIp, session);
+				    avg_citibank_del4=ssh.executeCommand(commandmoh54+" "+sourceIp, session);
+				    avg_mpulse_del4=ssh.executeCommand(commandmoh55+" "+sourceIp, session);
+				    avg_karuryyasa_del4=ssh.executeCommand(commandmoh56+" "+sourceIp, session);
+				    avg_vijayabank_del4=ssh.executeCommand(commandmoh57+" "+sourceIp, session);
+				    avg_corporationbank_del4=ssh.executeCommand(commandmoh58+" "+sourceIp, session);
+				    avg_standarchartered_del4=ssh.executeCommand(commandmoh59+" "+sourceIp, session);
+				    avg_punjabmaharashtrabank_del4=ssh.executeCommand(commandmoh60+" "+sourceIp, session);
+				    avg_billdesk_del4=ssh.executeCommand(commandmoh61+" "+sourceIp, session);
+				    avg_rupaybank_del4=ssh.executeCommand(commandmoh62+" "+sourceIp, session);
+				
+			}else if(ip.equalsIgnoreCase("10.227.214.208")) {
+			    avg_google_del4=ssh.executeCommand(commandkol+" "+sourceIp, session);
+			    avg_facebook_del4=ssh.executeCommand(commandkol1+" "+sourceIp, session);
+			    avg_yahoo_del4=ssh.executeCommand(commandkol2+" "+sourceIp, session);
+			    avg_gmail_del4=ssh.executeCommand(commandkol3+" "+sourceIp, session);
+			    avg_whatsapp_del4=ssh.executeCommand(commandkol4+" "+sourceIp, session);
+			    avg_cricbuzz_del4=ssh.executeCommand(commandkol5+" "+sourceIp, session);
+			    avg_youtube_del4=ssh.executeCommand(commandkol6+" "+sourceIp, session);
+			    avg_wikipedia_del4=ssh.executeCommand(commandkol7+" "+sourceIp, session);
+			    avg_naukri_del4=ssh.executeCommand(commandkol8+" "+sourceIp, session);
+			    avg_wikimedia_del4=ssh.executeCommand(commandkol9+" "+sourceIp, session);
+			    avg_axisbank_del4=ssh.executeCommand(commandkol10+" "+sourceIp, session);
+			    avg_hdfcbank_del4=ssh.executeCommand(commandkol11+" "+sourceIp, session);
+			    avg_amazon_del4=ssh.executeCommand(commandkol12+" "+sourceIp, session);
+			    avg_makemytrip_del4=ssh.executeCommand(commandkol13+" "+sourceIp, session);
+			    avg_moneycontrol_del4=ssh.executeCommand(commandkol14+" "+sourceIp, session);
+			    avg_netflix_del4=ssh.executeCommand(commandkol15+" "+sourceIp, session);
+			    avg_hotstar_del4=ssh.executeCommand(commandkol16+" "+sourceIp, session);
+			    avg_altbalaji_del4=ssh.executeCommand(commandkol17+" "+sourceIp, session);
+			    avg_zee5_del4=ssh.executeCommand(commandkol18+" "+sourceIp, session);
+			    avg_viu_del4=ssh.executeCommand(commandkol19+" "+sourceIp, session);
+			    avg_spuul_del4=ssh.executeCommand(commandkol20+" "+sourceIp, session);
+			    avg_hooq_del4=ssh.executeCommand(commandkol21+" "+sourceIp, session);
+			    avg_erosnow_del4=ssh.executeCommand(commandkol22+" "+sourceIp, session);
+			    avg_sonyliv_del4=ssh.executeCommand(commandkol23+" "+sourceIp, session);
+			    avg_voot_del4=ssh.executeCommand(commandkol24+" "+sourceIp, session);
+			    avg_instagram_del4=ssh.executeCommand(commandkol25+" "+sourceIp, session);
+			    
+			    
+			    	avg_twitter_del4=ssh.executeCommand(commandkol26+" "+sourceIp, session);
+				   avg_mfacebook_del4=ssh.executeCommand(commandkol27+" "+sourceIp, session);
+				    avg_rediff_del4=ssh.executeCommand(commandkol28+" "+sourceIp, session);
+				    avg_ea_del4=ssh.executeCommand(commandkol29+" "+sourceIp, session);
+				    avg_razorpay_del4=ssh.executeCommand(commandkol30+" "+sourceIp, session);
+				     avg_pubg_del4=ssh.executeCommand(commandkol31+" "+sourceIp, session);
+				    avg_rummycircle_del4=ssh.executeCommand(commandkol32+" "+sourceIp, session);
+				    avg_supercell_del4=ssh.executeCommand(commandkol33+" "+sourceIp, session);
+				    avg_dccomics_del4=ssh.executeCommand(commandkol34+" "+sourceIp, session);
+				    avg_primevideo_del4=ssh.executeCommand(commandkol35+" "+sourceIp, session);
+				    avg_tiktok_del4=ssh.executeCommand(commandkol36+" "+sourceIp, session);
+				    avg_smule_del4=ssh.executeCommand(commandkol37+" "+sourceIp, session);
+				    avg_zomato_del4=ssh.executeCommand(commandkol38+" "+sourceIp, session);
+				    avg_swiggy_del4=ssh.executeCommand(commandkol39+" "+sourceIp, session);
+				    avg_ubereats_del4=ssh.executeCommand(commandkol40+" "+sourceIp, session);
+				    avg_olacabs_del4=ssh.executeCommand(commandkol41+" "+sourceIp, session);
+				    avg_uber_del4=ssh.executeCommand(commandkol42+" "+sourceIp, session);
+				    avg_mobikwik_del4=ssh.executeCommand(commandkol43+" "+sourceIp, session);
+				    
+				    avg_indianbank_del4=ssh.executeCommand(commandkol44+" "+sourceIp, session);
+				    avg_tamilnadumercentile_del4=ssh.executeCommand(commandkol45+" "+sourceIp, session);
+				    avg_icicibank_del4=ssh.executeCommand(commandkol46+" "+sourceIp, session);
+				    avg_paytmbank_del4=ssh.executeCommand(commandkol47+" "+sourceIp, session);
+				    avg_unitedbank_del4=ssh.executeCommand(commandkol48+" "+sourceIp, session);
+				    avg_amazonpay_del4=ssh.executeCommand(commandkol49+" "+sourceIp, session);
+				    avg_ccavenue_del4=ssh.executeCommand(commandkol50+" "+sourceIp, session);
+				    avg_freecharge_del4=ssh.executeCommand(commandkol51+" "+sourceIp, session);
+				    avg_zapak_del4=ssh.executeCommand(commandkol52+" "+sourceIp, session);
+				    avg_gameguru_del4=ssh.executeCommand(commandkol53+" "+sourceIp, session);
+				    avg_citibank_del4=ssh.executeCommand(commandkol54+" "+sourceIp, session);
+				    avg_mpulse_del4=ssh.executeCommand(commandkol55+" "+sourceIp, session);
+				    avg_karuryyasa_del4=ssh.executeCommand(commandkol56+" "+sourceIp, session);
+				    avg_vijayabank_del4=ssh.executeCommand(commandkol57+" "+sourceIp, session);
+				    avg_corporationbank_del4=ssh.executeCommand(commandkol58+" "+sourceIp, session);
+				    avg_standarchartered_del4=ssh.executeCommand(commandkol59+" "+sourceIp, session);
+				    avg_punjabmaharashtrabank_del4=ssh.executeCommand(commandkol60+" "+sourceIp, session);
+				    avg_billdesk_del4=ssh.executeCommand(commandkol61+" "+sourceIp, session);
+				    avg_rupaybank_del4=ssh.executeCommand(commandkol62+" "+sourceIp, session);
+				
+			}else if(ip.equalsIgnoreCase("10.227.214.208")) {
+				
+			    avg_google_del4=ssh.executeCommand(commandlko+" "+sourceIp, session);
+			    avg_facebook_del4=ssh.executeCommand(commandlko1+" "+sourceIp, session);
+			    avg_yahoo_del4=ssh.executeCommand(commandlko2+" "+sourceIp, session);
+			    avg_gmail_del4=ssh.executeCommand(commandlko3+" "+sourceIp, session);
+			    avg_whatsapp_del4=ssh.executeCommand(commandlko4+" "+sourceIp, session);
+			    avg_cricbuzz_del4=ssh.executeCommand(commandlko5+" "+sourceIp, session);
+			    avg_youtube_del4=ssh.executeCommand(commandlko6+" "+sourceIp, session);
+			    avg_wikipedia_del4=ssh.executeCommand(commandlko7+" "+sourceIp, session);
+			    avg_naukri_del4=ssh.executeCommand(commandlko8+" "+sourceIp, session);
+			    avg_wikimedia_del4=ssh.executeCommand(commandlko9+" "+sourceIp, session);
+			    avg_axisbank_del4=ssh.executeCommand(commandlko10+" "+sourceIp, session);
+			    avg_hdfcbank_del4=ssh.executeCommand(commandlko11+" "+sourceIp, session);
+			    avg_amazon_del4=ssh.executeCommand(commandlko12+" "+sourceIp, session);
+			    avg_makemytrip_del4=ssh.executeCommand(commandlko13+" "+sourceIp, session);
+			    avg_moneycontrol_del4=ssh.executeCommand(commandlko14+" "+sourceIp, session);
+			    avg_netflix_del4=ssh.executeCommand(commandlko15+" "+sourceIp, session);
+			    avg_hotstar_del4=ssh.executeCommand(commandlko16+" "+sourceIp, session);
+			    avg_altbalaji_del4=ssh.executeCommand(commandlko17+" "+sourceIp, session);
+			    avg_zee5_del4=ssh.executeCommand(commandlko18+" "+sourceIp, session);
+			    avg_viu_del4=ssh.executeCommand(commandlko19+" "+sourceIp, session);
+			    avg_spuul_del4=ssh.executeCommand(commandlko20+" "+sourceIp, session);
+			    avg_hooq_del4=ssh.executeCommand(commandlko21+" "+sourceIp, session);
+			    avg_erosnow_del4=ssh.executeCommand(commandlko22+" "+sourceIp, session);
+			    avg_sonyliv_del4=ssh.executeCommand(commandlko23+" "+sourceIp, session);
+			    avg_voot_del4=ssh.executeCommand(commandlko24+" "+sourceIp, session);
+			    avg_instagram_del4=ssh.executeCommand(commandlko25+" "+sourceIp, session);
+			    
+			    
+			    	avg_twitter_del4=ssh.executeCommand(commandlko26+" "+sourceIp, session);
+				   avg_mfacebook_del4=ssh.executeCommand(commandlko27+" "+sourceIp, session);
+				    avg_rediff_del4=ssh.executeCommand(commandlko28+" "+sourceIp, session);
+				    avg_ea_del4=ssh.executeCommand(commandlko29+" "+sourceIp, session);
+				    avg_razorpay_del4=ssh.executeCommand(commandlko30+" "+sourceIp, session);
+				     avg_pubg_del4=ssh.executeCommand(commandlko31+" "+sourceIp, session);
+				    avg_rummycircle_del4=ssh.executeCommand(commandlko32+" "+sourceIp, session);
+				    avg_supercell_del4=ssh.executeCommand(commandlko33+" "+sourceIp, session);
+				    avg_dccomics_del4=ssh.executeCommand(commandlko34+" "+sourceIp, session);
+				    avg_primevideo_del4=ssh.executeCommand(commandlko35+" "+sourceIp, session);
+				    avg_tiktok_del4=ssh.executeCommand(commandlko36+" "+sourceIp, session);
+				    avg_smule_del4=ssh.executeCommand(commandlko37+" "+sourceIp, session);
+				    avg_zomato_del4=ssh.executeCommand(commandlko38+" "+sourceIp, session);
+				    avg_swiggy_del4=ssh.executeCommand(commandlko39+" "+sourceIp, session);
+				    avg_ubereats_del4=ssh.executeCommand(commandlko40+" "+sourceIp, session);
+				    avg_olacabs_del4=ssh.executeCommand(commandlko41+" "+sourceIp, session);
+				    avg_uber_del4=ssh.executeCommand(commandlko42+" "+sourceIp, session);
+				    avg_mobikwik_del4=ssh.executeCommand(commandlko43+" "+sourceIp, session);
+				    
+				    avg_indianbank_del4=ssh.executeCommand(commandlko44+" "+sourceIp, session);
+				    avg_tamilnadumercentile_del4=ssh.executeCommand(commandlko45+" "+sourceIp, session);
+				    avg_icicibank_del4=ssh.executeCommand(commandlko46+" "+sourceIp, session);
+				    avg_paytmbank_del4=ssh.executeCommand(commandlko47+" "+sourceIp, session);
+				    avg_unitedbank_del4=ssh.executeCommand(commandlko48+" "+sourceIp, session);
+				    avg_amazonpay_del4=ssh.executeCommand(commandlko49+" "+sourceIp, session);
+				    avg_ccavenue_del4=ssh.executeCommand(commandlko50+" "+sourceIp, session);
+				    avg_freecharge_del4=ssh.executeCommand(commandlko51+" "+sourceIp, session);
+				    avg_zapak_del4=ssh.executeCommand(commandlko52+" "+sourceIp, session);
+				    avg_gameguru_del4=ssh.executeCommand(commandlko53+" "+sourceIp, session);
+				    avg_citibank_del4=ssh.executeCommand(commandlko54+" "+sourceIp, session);
+				    avg_mpulse_del4=ssh.executeCommand(commandlko55+" "+sourceIp, session);
+				    avg_karuryyasa_del4=ssh.executeCommand(commandlko56+" "+sourceIp, session);
+				    avg_vijayabank_del4=ssh.executeCommand(commandlko57+" "+sourceIp, session);
+				    avg_corporationbank_del4=ssh.executeCommand(commandlko58+" "+sourceIp, session);
+				    avg_standarchartered_del4=ssh.executeCommand(commandlko59+" "+sourceIp, session);
+				    avg_punjabmaharashtrabank_del4=ssh.executeCommand(commandlko60+" "+sourceIp, session);
+				    avg_billdesk_del4=ssh.executeCommand(commandlko61+" "+sourceIp, session);
+				    avg_rupaybank_del4=ssh.executeCommand(commandlko62+" "+sourceIp, session);
+				
+				
+			}
+			
+			
+			else {
+			
+		    avg_google_del4=ssh.executeCommand(command+" "+sourceIp, session);
+		    avg_facebook_del4=ssh.executeCommand(command1+" "+sourceIp, session);
+		     avg_yahoo_del4=ssh.executeCommand(command2+" "+sourceIp, session);
+		   avg_gmail_del4=ssh.executeCommand(command3+" "+sourceIp, session);
+		    avg_whatsapp_del4=ssh.executeCommand(command4+" "+sourceIp, session);
+		    avg_cricbuzz_del4=ssh.executeCommand(command5+" "+sourceIp, session);
+		    avg_youtube_del4=ssh.executeCommand(command6+" "+sourceIp, session);
+		   avg_wikipedia_del4=ssh.executeCommand(command7+" "+sourceIp, session);
+		    avg_naukri_del4=ssh.executeCommand(command8+" "+sourceIp, session);
+		    avg_wikimedia_del4=ssh.executeCommand(command9+" "+sourceIp, session);
+		    avg_axisbank_del4=ssh.executeCommand(command10+" "+sourceIp, session);
+		     avg_hdfcbank_del4=ssh.executeCommand(command11+" "+sourceIp, session);
+		    avg_amazon_del4=ssh.executeCommand(command12+" "+sourceIp, session);
+		    avg_makemytrip_del4=ssh.executeCommand(command13+" "+sourceIp, session);
+		    avg_moneycontrol_del4=ssh.executeCommand(command14+" "+sourceIp, session);
+		    avg_netflix_del4=ssh.executeCommand(command15+" "+sourceIp, session);
+		    avg_hotstar_del4=ssh.executeCommand(command16+" "+sourceIp, session);
+		    avg_altbalaji_del4=ssh.executeCommand(command17+" "+sourceIp, session);
+		    avg_zee5_del4=ssh.executeCommand(command18+" "+sourceIp, session);
+		    avg_viu_del4=ssh.executeCommand(command19+" "+sourceIp, session);
+		    avg_spuul_del4=ssh.executeCommand(command20+" "+sourceIp, session);
+		    avg_hooq_del4=ssh.executeCommand(command21+" "+sourceIp, session);
+		    avg_erosnow_del4=ssh.executeCommand(command22+" "+sourceIp, session);
+		    avg_sonyliv_del4=ssh.executeCommand(command23+" "+sourceIp, session);
+		    avg_voot_del4=ssh.executeCommand(command24+" "+sourceIp, session);
+		    avg_instagram_del4=ssh.executeCommand(command25+" "+sourceIp, session);
+		    
+		    
+		    	avg_twitter_del4=ssh.executeCommand(command26+" "+sourceIp, session);
+			   avg_mfacebook_del4=ssh.executeCommand(command27+" "+sourceIp, session);
+			    avg_rediff_del4=ssh.executeCommand(command28+" "+sourceIp, session);
+			    avg_ea_del4=ssh.executeCommand(command29+" "+sourceIp, session);
+			    avg_razorpay_del4=ssh.executeCommand(command30+" "+sourceIp, session);
+			     avg_pubg_del4=ssh.executeCommand(command31+" "+sourceIp, session);
+			    avg_rummycircle_del4=ssh.executeCommand(command32+" "+sourceIp, session);
+			    avg_supercell_del4=ssh.executeCommand(command33+" "+sourceIp, session);
+			    avg_dccomics_del4=ssh.executeCommand(command34+" "+sourceIp, session);
+			    avg_primevideo_del4=ssh.executeCommand(command35+" "+sourceIp, session);
+			    avg_tiktok_del4=ssh.executeCommand(command36+" "+sourceIp, session);
+			    avg_smule_del4=ssh.executeCommand(command37+" "+sourceIp, session);
+			    avg_zomato_del4=ssh.executeCommand(command38+" "+sourceIp, session);
+			    avg_swiggy_del4=ssh.executeCommand(command39+" "+sourceIp, session);
+			    avg_ubereats_del4=ssh.executeCommand(command40+" "+sourceIp, session);
+			    avg_olacabs_del4=ssh.executeCommand(command41+" "+sourceIp, session);
+			    avg_uber_del4=ssh.executeCommand(command42+" "+sourceIp, session);
+			    avg_mobikwik_del4=ssh.executeCommand(command43+" "+sourceIp, session);
+			    
+			    avg_indianbank_del4=ssh.executeCommand(command44+" "+sourceIp, session);
+			    avg_tamilnadumercentile_del4=ssh.executeCommand(command45+" "+sourceIp, session);
+			    avg_icicibank_del4=ssh.executeCommand(command46+" "+sourceIp, session);
+			    avg_paytmbank_del4=ssh.executeCommand(command47+" "+sourceIp, session);
+			    avg_unitedbank_del4=ssh.executeCommand(command48+" "+sourceIp, session);
+			    avg_amazonpay_del4=ssh.executeCommand(command49+" "+sourceIp, session);
+			    avg_ccavenue_del4=ssh.executeCommand(command50+" "+sourceIp, session);
+			    avg_freecharge_del4=ssh.executeCommand(command51+" "+sourceIp, session);
+			    avg_zapak_del4=ssh.executeCommand(command52+" "+sourceIp, session);
+			    avg_gameguru_del4=ssh.executeCommand(command53+" "+sourceIp, session);
+			    avg_citibank_del4=ssh.executeCommand(command54+" "+sourceIp, session);
+			    avg_mpulse_del4=ssh.executeCommand(command55+" "+sourceIp, session);
+			    avg_karuryyasa_del4=ssh.executeCommand(command56+" "+sourceIp, session);
+			    avg_vijayabank_del4=ssh.executeCommand(command57+" "+sourceIp, session);
+			    avg_corporationbank_del4=ssh.executeCommand(command58+" "+sourceIp, session);
+			    avg_standarchartered_del4=ssh.executeCommand(command59+" "+sourceIp, session);
+			    avg_punjabmaharashtrabank_del4=ssh.executeCommand(command60+" "+sourceIp, session);
+			    avg_billdesk_del4=ssh.executeCommand(command61+" "+sourceIp, session);
+			    avg_rupaybank_del4=ssh.executeCommand(command62+" "+sourceIp, session);
+			    
+			    
+			}
+			    
+		    
+		    ssh.disconect(session);
+		    save(name, avg_google_del4, avg_facebook_del4, avg_yahoo_del4, avg_gmail_del4, avg_whatsapp_del4, avg_cricbuzz_del4, avg_youtube_del4, avg_wikipedia_del4, avg_naukri_del4, avg_wikimedia_del4, avg_axisbank_del4, avg_hdfcbank_del4, avg_amazon_del4, avg_makemytrip_del4, avg_moneycontrol_del4,
+		    		avg_netflix_del4,avg_hotstar_del4,avg_altbalaji_del4,avg_zee5_del4,avg_viu_del4,avg_spuul_del4,avg_hooq_del4,avg_erosnow_del4,avg_sonyliv_del4,avg_voot_del4,avg_instagram_del4,avg_twitter_del4,avg_mfacebook_del4,avg_rediff_del4,avg_ea_del4,avg_razorpay_del4,avg_pubg_del4,avg_rummycircle_del4,avg_supercell_del4,avg_dccomics_del4,avg_primevideo_del4,avg_tiktok_del4,avg_smule_del4,avg_zomato_del4,avg_swiggy_del4,avg_ubereats_del4,avg_olacabs_del4,avg_uber_del4,avg_mobikwik_del4,
+		    		avg_indianbank_del4,avg_tamilnadumercentile_del4,avg_icicibank_del4,avg_paytmbank_del4,avg_unitedbank_del4,avg_amazonpay_del4,avg_ccavenue_del4,avg_freecharge_del4,avg_zapak_del4,avg_gameguru_del4,avg_citibank_del4,avg_mpulse_del4,avg_karuryyasa_del4,avg_vijayabank_del4,avg_corporationbank_del4,avg_standarchartered_del4,avg_punjabmaharashtrabank_del4,avg_billdesk_del4,avg_rupaybank_del4);
+		    } 
+	    catch (Exception e) {
+	    	save(name, "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0", "0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0","0.0");
+			   
+	    
+			System.out.println("Connection Failed..."+e);
+			e.printStackTrace();
+	    }
+	}
+
+@Override
+	public void run() {
+		getData(ip,username,password,name,sourceIp);
+		
+	}
+    			
+    
+	
+	public com.jcraft.jsch.Session getConection(String host,String user,String password)throws Exception {
+		    Properties config = new Properties();
+			config.put("StrictHostKeyChecking", "no");
+			JSch jsch = new JSch();
+			// Create a JSch session to connect to the server
+			com.jcraft.jsch.Session session = jsch.getSession(user, host, 22);
+			session.setPassword(password);
+			session.setConfig(config);
+			// Establish the connection
+			session.connect();
+			System.out.println("Connected...");
+			return session;
+	}
+	
+	public String executeCommand(String command, com.jcraft.jsch.Session session) {
+		try {
+		ChannelExec channel = (ChannelExec) session.openChannel("exec");
+		channel.setCommand(command);
+		channel.setErrStream(System.err);
+        String response=null;
+		InputStream in = channel.getInputStream();
+		channel.connect();
+		byte[] tmp = new byte[1024];
+		while (true) {
+			while (in.available() > 0) { 
+				int i = in.read(tmp, 0, 1024);
+				if (i < 0) {
+					break;
+				}
+				response=response+new String(tmp, 0, i);
+				System.out.print(new String(tmp, 0, i));
+			}
+			if (channel.isClosed()) {
+				System.out.println("Exit Status: "
+						+ channel.getExitStatus());
+				break;
+			}
+			Thread.sleep(1000);
+			System.out.println("Keshav");
+		}
+		String res=StringUtils.substringBetween(response, "min/avg/max/stddev = "," ms");
+		String[] words=res.split("/");
+		System.out.println(words[1]);
+		channel.disconnect();
+	    return words[1];
+		}catch(Exception e)
+		{
+			return "0.0";
+		}
+	}
+	
+	public void disconect(com.jcraft.jsch.Session session)
+	{
+		session.disconnect();
+		System.out.println("disconnected..");
+	}
+}
+	public class ClientRunCheckCondition
+	{
+		// Maximum number of threads in thread pool 
+	    static final int MAX_T = 20;              
+	  
+	    public static void main(String[] args) 
+	    { 
+	    	
+	    	
+	    	SSHReadFileTest task=new SSHReadFileTest();
+	        // creates five tasks 
+	        Runnable r1 = new SSHReadFileTest("10.227.215.209","dslnoc","qwe123QWE!@#","BRASDEL-4","source 122.160.220.76"); 
+	        Runnable r2 = new SSHReadFileTest("10.227.215.214","dslnoc","qwe123QWE!@#","BRASDEL-5","source 122.160.220.236"); 
+	        Runnable r3 = new SSHReadFileTest("10.227.215.222","dslnoc","qwe123QWE!@#","BRASDEL-6","source 122.169.34.1"); 
+	        Runnable r4 = new SSHReadFileTest("10.227.215.234","dslnoc","qwe123QWE!@#","BRASDEL-7","source 117.97.128.1"); 
+	        Runnable r5 = new SSHReadFileTest("10.232.201.6","dslnoc","qwe123QWE!@#","BRASNOI-2","source 122.176.127.68"); 
+	        Runnable r6 = new SSHReadFileTest("10.232.201.9","dslnoc","qwe123QWE!@#","BRASNOI-3","source 122.176.127.70"); 
+	        Runnable r7 = new SSHReadFileTest("10.227.214.137","dslnoc","qwe123QWE!@#","BRASLKO-2","source 117.96.15.255"); 
+	        Runnable r8 = new SSHReadFileTest("10.227.214.208","dslnoc","qwe123QWE!@#","BRASKOL-1","source 122.169.35.1"); 
+	        Runnable r9 = new SSHReadFileTest("10.227.199.147","dslnoc","qwe123QWE!@#","BRASMP-6","source 182.70.215.1"); 
+	        Runnable r10 = new SSHReadFileTest("10.227.199.152","dslnoc","qwe123QWE!@#","BRASMP-7","source 122.169.32.1"); 
+	        Runnable r11 = new SSHReadFileTest("10.227.215.17","dslnoc","qwe123QWE!@#","BRASMOH-2","source 122.173.79.255"); 
+	        Runnable r12 = new SSHReadFileTest("10.227.199.219","dslnoc","qwe123QWE!@#","BRASMUM-5","source 171.50.255.255"); 
+	        Runnable r13 = new SSHReadFileTest("10.227.199.222","dslnoc","qwe123QWE!@#","BRASMUM-6","source 122.170.32.1"); 
+	        Runnable r14 = new SSHReadFileTest("10.227.207.79","B0077007","Unoc@123","BRASBLR-4","source 122.172.64.1"); 
+	        Runnable r15 = new SSHReadFileTest("10.227.204.146","B0077007","Unoc@123","BRASBLR-7","source 122.179.4.1"); 
+	        Runnable r16 = new SSHReadFileTest("10.227.207.89","B0077007","Unoc@123","BRASBLR-8","source 171.76.72.1"); 
+	        Runnable r17 = new SSHReadFileTest("10.227.206.108","B0077007","Unoc@123","BRASHYD-5","source 223.230.1.16"); 
+	        Runnable r18 = new SSHReadFileTest("10.227.200.84","B0077007","Unoc@123","BRASCHEN-7","source 182.65.68.1"); 
+	        Runnable r19 = new SSHReadFileTest("10.227.207.232","B0077007","Unoc@123","BRASCHEN-8","source 122.164.48.1"); 
+	        Runnable r20 = new SSHReadFileTest("10.227.200.89","B0077007","Unoc@123","BRASCHEN-9","source 171.78.132.1"); 
+	        
+	          
+	        // creates a thread pool with MAX_T no. of  
+	        // threads as the fixed pool size(Step 2) 
+	        ExecutorService pool = Executors.newFixedThreadPool(MAX_T);   
+	         
+	        // passes the Task objects to the pool to execute (Step3) 
+	        pool.execute(r1); 
+	        pool.execute(r2); 
+	        pool.execute(r3); 
+	        pool.execute(r4); 
+	        pool.execute(r5);
+	        pool.execute(r6); 
+	        pool.execute(r7); 	
+	        pool.execute(r8); 
+	        pool.execute(r9); 
+	        pool.execute(r10);
+	        pool.execute(r11); 
+	        pool.execute(r12); 
+	        pool.execute(r13); 
+	        pool.execute(r14); 
+	        pool.execute(r15); 
+	        pool.execute(r16); 
+	        pool.execute(r17); 
+	        pool.execute(r18); 
+	        pool.execute(r19); 
+	        pool.execute(r20); 
+	        
+	          
+	        // pool shutdown ( Step 4) 
+	        pool.shutdown();     
+	      System.out.println("Successfully Completed......");    
+	      
+	    } 
+}

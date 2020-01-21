@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SELECT3</title>
+  <style type="text/css"> 
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+}
+.div-style-7{
+    max-width:400px;   
+}
+.div-style-7 div{   
+    padding: 9px;   
+    border-radius: 3px;
+}
+.div-style-7 div > label{
+    float: left;
+    margin-top: -19px;
+    background: #FFFFFF;
+    padding: 2px 5px 2px 5px;
+    color: #B9B9B9;
+}
+.div-style-7 input[type="text"],
+.div-style-7 input[type="date"],
+.div-style-7 textarea,
+.div-style-7 select 
+{    
+    width: 100%;
+    display: block;
+    outline: none;
+    border: none;   
+    line-height: 25px;
+    font-size: 16px;
+}
+.div-style-7 div > span{
+    background: #F3F3F3;
+    display: block;
+    padding: 3px;
+    margin: 0 -9px -9px -9px;
+    text-align: center;
+    color: #C0C0C0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 11px;
+}
+input{
+  height: 15px;
+}
+textarea{
+  height: 40px;
+  }
+.example_b {
+color: #fff !important;
+background: #60a3bc;
+padding: 20px;
+border-radius: 20px;
+display: inline-block;
+border: none;
+cursor: pointer;
+}
+.example_b:hover {
+text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
+-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+transition: all 0.4s ease 0s;
+}
+  </style>
+
+</head>
+<body>
+
+<div class="container" style="height: 80%;margin-top: 0%;">
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Plan ID</label>
+       <input type="text" name="name" maxlength="100">
+    <span>Enter Plan ID</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">CRF Type</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter CRF Type</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Zone </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Zone </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">City</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter City</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> Cluster Name</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter  Cluster Name</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> AP IP Address </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter  AP IP Address </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Gateway</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Gateway</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> Subnet_Mask</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Subnet_Mask</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">VLAN ID </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter VLAN ID </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Switch IP</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Switch IP</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> Host Name </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter  Host Name </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Customer Name </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Customer Name </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Address</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Address</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">AP No</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter AP No</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">AT Type</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter AT Type</span>
+</div>
+</ul>
+</div>
+
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Floor</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Floor</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">AP Custom Field 1</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter AP Custom Field 1</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> RA</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter  RA</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Ckt ID</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Ckt ID</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Bandwidth Mb</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Bandwidth Mb</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">B_H_FIBER_MW_DSL</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter B_H_FIBER_MW_DSL</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Backhaul Vender </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Backhaul Vender </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Backhaul RA</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Backhaul RA</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Backhaul Circuit ID</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Backhaul Circuit ID</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> Backhaul Bandwidth </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter  Backhaul Bandwidth </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Backhaul Node Name</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Backhaul Node Name</span>
+</div>
+</ul>
+</div>
+
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Backhaul Port</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Backhaul Port</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">LSI Number</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter LSI Number</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> DSL CAF ID</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter  DSL CAF ID</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">DSL User ID</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter DSL User ID</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">RSU Detail</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter RSU Detail</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">RSU Port </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter RSU Port </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">CPE WAN IP</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter CPE WAN IP</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Acquisition Owner</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Acquisition Owner </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Business Plan</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Business Plan</span>
+</div>
+</ul>
+</div>
+
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">SSID 1</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter SSID 1</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">SSID 2</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter SSID 2</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">SSID 3</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter SSID 3</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">SSID 4 </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter SSID 4 </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">SSID 5</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter SSID 5</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">SSID 6</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter SSID 6</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Contact Person</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Contact Person</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Contact detail</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Contact detail</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">AP Serial No</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter AP Serial No</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> Long</label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Long</span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Start Date </label>
+    <input type="text" name="name" maxlength="100">
+    <span>Enter Start Date </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Click Here to Pick up the date </label>
+    <input type="text"onfocus="(this.type='date')" maxlength="100">
+    <span>Click Here to Pick up the date </span>
+</div>
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name">Topology Diagram</label>
+    <input type="text" name="name" maxlength="100">
+    <span><input type="file" name="name" maxlength="100"></span>
+</div>
+</ul>
+</div>
+
+<div class="div-style-7">
+<ul>
+<div style="border: 1px solid #DDDDDD;">
+    <label for="name"> Comment</label>
+    <textarea name="bio" onkeyup="adjust_textarea(this)"></textarea>
+    <span>Enter  Comment</span>
+</div>
+
+</ul>
+</div>
+<div class="div-style-7">
+<ul>
+
+  <div class="button_cont" align="center"><a class="example_b"style="text-decoration: none;height: 0px;"><p style="margin-top: -14%;">Update</p></a></div>
+
+</ul>
+</div>
+
+</div> 
+</body>
+</html>
