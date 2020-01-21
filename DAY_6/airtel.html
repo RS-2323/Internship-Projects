@@ -1,0 +1,42 @@
+
+
+
+<html>
+  <head>
+    <script type="text/javascript" src="loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var array1=[10,20,30,40,50];
+        var array2=[10,200,300,400,500];
+        var i;
+
+         for(i=0;i<5;i++)
+          {
+             alert("--"+array1[i]);
+        var data = google.visualization.arrayToDataTable([
+             ['Time',  'Expenses'],
+            [array1[i],array2[i]]
+          
+        ]);
+}
+        var options = {
+          title: 'Company Performance',
+          hAxis: {title: 'BETS',  titleTextStyle: {color: '#333'}},
+          vAxis: {minValue: 0}
+        };
+
+        var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+         
+        chart.draw(data, options);
+        
+      
+      }
+    </script>
+  </head>
+  <body>
+    <div id="chart_div" style="width: 100%; height: 500px;"></div>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.io.FileReader;
+import java.io.FileWriter;
+import java.util.ArrayList;
+import java.util.StringTokenizer;
+
+public class VAT {
+ 
+	@SuppressWarnings("unused")
+	public static void main(String[] args) throws IOException
+	{
+		String strLine="";
+	try
+	{
+	ArrayList<String> ar = new ArrayList<String>();
+	File csvFile = new File("C:\\Users\\Om\\Desktop\\Airtel_Project\\Java_Airtel_Project\\project_3\\pranav_1111.csv");
+	@SuppressWarnings("resource")
+	FileWriter writer = new FileWriter("C:\\Users\\Om\\Desktop\\Airtel_Project\\Java_Airtel_Project\\project_3\\step_1.csv");
+	@SuppressWarnings("resource")
+	BufferedReader br = new BufferedReader(new FileReader(csvFile));
+	String line = "";
+	StringTokenizer st = null;
+	int lineNumber = 0;
+	int tokenNumber = 0;
+	while ((line = br.readLine()) != null) {
+	String[] arr = line.split(",");
+	int len=arr[1].length();
+
+	if(len>19) {
+	
+		//System.out.println(arr[0]+","+arr[1]+","+arr[2]+"\r\n");
+		System.out.println(arr[0]+","+arr[1].substring(0,19)+","+arr[2].replace(arr[2],arr[1].substring(19))+"\r\n");
+		writer.write(arr[0]+","+arr[1].substring(0,19)+","+arr[2].replace(arr[2],arr[1].substring(19))+"\r\n");
+	
+
+	lineNumber++;
+
+	}
+	else {
+		System.out.println(arr[0]+","+arr[1]+","+arr[2]+"\r\n");
+		writer.write(arr[0]+","+arr[1]+","+arr[2]+"\r\n");
+
+	}
+	}
+	}
+	
+	catch (FileNotFoundException e) {
+        System.err.println("File not found");
+    } catch (IOException e) {
+        System.err.println("Unable to read the file.");
+    }
+
+}
+
+}
+	

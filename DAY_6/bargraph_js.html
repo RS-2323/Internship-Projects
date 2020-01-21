@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <script type="text/javascript">
+
+
+  window.onload = function () {
+    CanvasJS.addColorSet("greenShades",
+                [//colorSet Array
+
+                "#00e600"]);
+
+    var chart = new CanvasJS.Chart("chartContainer",
+
+          {
+            animationEnabled: true,
+  theme: "dark1", // "light1", "light2", "dark1", "dark2"animationEnabled: true,
+  theme: "light2", // "light1", "light2", "dark1", "dark2"
+
+            title:{
+                text: "AIRTEL"
+            },
+        data: [
+
+      {
+        type: "column",
+        dataPoints: [//array
+        { x: 2 , y: 12567},
+        { x: 4 , y: 14890},
+        { x: 6 , y: 12245},
+        { x: 8 , y: 15674},
+        { x: 10 , y: 12654},
+        { x: 12 , y: 12369},
+        { x: 14 , y: 12098},
+        { x: 16 , y: 12330},
+        { x: 18 , y: 12500},
+        { x: 20 , y: 12763},
+        { x: 22 , y: 12000}
+        
+
+        ]
+      }
+      ]
+    });
+
+    chart.render();
+  }
+  </script>
+  <script type="text/javascript" src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  <script type="text/javascript" src="zoodb.php"></script>
+</head>
+<body>
+  <div id="chartContainer" style="height: 300px; width: 100%; color: green;">
+  </div>
+</body>
+</html>
