@@ -1,0 +1,428 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="view/css/w3.css">
+  <link rel="stylesheet" href="view/style/font-awesome.min.css"> 
+  <script type="text/javascript" src="view/js/date_time.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+  <title>Insert title here</title>
+  <!-- <script> 
+ 
+        function myFunction() { 
+            var x1 = document.getElementsByName("planid");
+            var x2 = document.getElementsByName("city");
+            var x3 = document.getElementsByName("clustername");
+            var x4 = document.getElementsByName("apipaddress");
+            var x5 = document.getElementsByName("gateway");
+            var x6 = document.getElementsByName("subnetmask");
+            var x7 = document.getElementsByName("vlanid"); 
+            var x8 = document.getElementsByName("hostname");
+            var x9 = document.getElementsByName("customername");
+            var x10 = document.getElementsByName("address");
+            var x11 = document.getElementsByName("apno");
+            var x12 = document.getElementsByName("floor");
+            var x13 = document.getElementsByName("apcustomfield");
+            var x14 = document.getElementsByName("ra");
+            var x15 = document.getElementsByName("cktid");
+            var x16 = document.getElementsByName("bandwidthmb");
+            var x17 = document.getElementsByName("bhvendor");
+            var x18 = document.getElementsByName("bhra");
+            var x19 = document.getElementsByName("bhcktid");
+            var x20 = document.getElementsByName("bhbw");
+            var x21 = document.getElementsByName("bhnodename");
+            var x22 = document.getElementsByName("bhport");
+            var x23 = document.getElementsByName("lsino");
+            var x24 = document.getElementsByName("dslcaf");
+            var x25 = document.getElementsByName("dsluser");
+            var x26 = document.getElementsByName("rsu");
+            var x27 = document.getElementsByName("rsuport");
+            var x28 = document.getElementsByName("wanip");
+            var x29 = document.getElementsByName("acquisitionowner");
+            var x30 = document.getElementsByName("ssid1");
+            var x31 = document.getElementsByName("ssid2");
+            var x32 = document.getElementsByName("ssid3");
+            var x33 = document.getElementsByName("ssid4");
+            var x34 = document.getElementsByName("ssid5");
+            var x35 = document.getElementsByName("ssid6");
+            var x36 = document.getElementsByName("contactperson");
+            var x37 = document.getElementsByName("contactdetail");
+            var x38 = document.getElementsByName("startdate");
+            var x38 = document.getElementsByName("topology_diagram");
+            var x40 = document.getElementsByName("ap_path");
+            var x41 = document.getElementsByName("comments");
+            
+
+            if (isNaN(x1) || isNaN(x2) || isNaN(x3) || isNaN(x4) || isNaN(x5) || isNaN(x6) ||isNaN(x7) || isNaN(x8) || 
+              isNaN(x9) || isNaN(x10) || isNaN(x11) || isNaN(x12) ||isNaN(x13) || isNaN(x14) || isNaN(x15) ||isNaN(x16) || 
+              isNaN(x17) || isNaN(x18) || isNaN(x19) || isNaN(x20) || isNaN(x21) ||isNaN(x22) || isNaN(x23) || isNaN(x24) ||isNaN(x25) || isNaN(x26) || isNaN(x27) ||isNaN(x28) || isNaN(x29) || isNaN(x30) ||isNaN(x31) || isNaN(x32) || isNaN(x33) ||isNaN(x34) || isNaN(x35) ||isNaN(x) ||isNaN(x36) || isNaN(x37) || isNaN(x38) ||isNaN(x39) || isNaN(x40) || isNaN(x41)) {
+              text = "Input not valid";
+            }
+            else {
+              text = "Input OK";
+            }
+              document.getElementById("demo1").innerHTML = text;
+            }
+          </script>  -->
+          <style type="text/css">
+
+            body,html{
+              width: 100%;
+              height: 100%;
+            }
+            body{ 
+         
+              font-family: vendana;
+            }
+
+
+#t2{
+      width:100%;
+      background-color: white;
+      background-repeat: no-repeat;
+      background-size: 100% 100%;
+
+
+}
+#t2 td input[type=text]{
+     width: 70%;
+  padding: 7px 7px;
+  margin: 6px 0;
+  box-sizing: border-box;
+  border: 2px solid red;
+  border-radius: 6px;
+}
+tr{
+      height:30px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+
+input {
+	outline: none;
+}
+select{
+  width: 70%;
+  height: 40px;
+  color: red;
+  font-size: 130%;
+  background-color: honeydew;
+}
+</style>
+</head>
+<!-- <%-- <%
+List<PlanningDetails> result = (List<PlanningDetails>)request.getAttribute("content");
+System.out.println("JSP"+result.size());
+System.out.println(result.get(0).getAddress());
+
+%> --%> -->
+<body>
+  <div class="header" id="myHeader" style="height: 15%;">
+    <header class="w3-container w3-red" style="height: 100%;">
+      <div class="w3-row w3-container"  style="height: 70%; margin-top: 2%;">
+        <div class="w3-col" style="width:20%">
+          <h5><img src="view/airtel-new-logo-hori-770x285.jpg" class="w3-round-xxlarge" alt="airtel_logo" width=50% height=50%></h5>
+        </div>
+        <div class="w3-col" style="width: 50%">
+          <h1 class="w3-right w3-xxlarge"><b style="color: black; margin-left:;">ADD NEW DETAILS</h1>
+          </div>
+        </div>
+      </header>
+    </div>
+    <form action="addNewCrf" method="post" enctype="multipart/form-data">
+      <table id ="t2" align="center">
+        <tr>
+              <td><font size="4" style="font-weight: bolder;color:black; " face="times new Roman">Plan ID</font></td>
+
+      	      <td><input type="text" name="planid" size="20"></font><p id="demo1"></p></td>
+              
+
+              <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">CRF Type</font></td>
+      	      <td width="12%">
+              <select name="crftype">
+                <option value="customer">Customer</option>
+                <option value="Event">Event</option>
+                <option value="testing">Testing</option>
+              </select></td>
+
+      	      <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Zone</font></td>
+      	      <td width="12%">
+                <select name="zone">
+                  <option value="North">North</option>
+                  <option value="East">East</option>
+                  <option value="West">West</option>
+                  <option value="South">South</option>
+                </select></td>
+              </tr>
+
+      	<tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">City</font></td>
+      	   	<td><input type="text" name="city" size="20"><p id="demo2"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Cluster Name</font></td>
+      	   	<td><input type="text" name="clustername" size="20"><p id="demo3"></p></td>
+            
+
+      	   	<td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">AP IP Address</font></td>
+      	   	<td><input type="text" name="apipaddress" size="20"><p id="demo4"></p></td>
+            
+      	</tr> 
+
+      	<tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Gateway</font></td>
+      	   	<td><input type="text" name="gateway" size="20"><p id="demo5"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Subnet_Mask</font></td>
+      	   	<td><input type="text" name="subnetmask" size="20"><p id="demo6"></p></td>
+            
+
+      	   	<td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">VLAN ID</font></td>
+      	   	<td><input type="text" name="vlanid" size="20"><p id="demo7"></p></td>
+            
+
+		</tr>
+
+		<tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Host Name</font></td>
+      	   	<td><input type="text" name="hostname" size="20"><p id="demo8"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Customer Name</font></td>
+      	   	<td><input type="text" name="customername" size="20"><p id="demo9"></p></td>
+            
+
+        </tr>
+
+      	<tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Address</font></td>
+      	    <td><input type="text" name="address" size="20"><p id="demo10"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">AP No</font></td>
+      	    <td><input type="text" name="apno" size="20"><p id="demo11"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">AT Type</font></td>
+        <td width="12%"><select name="attype">
+
+            <option value="Indoor">Indoor</option>
+            <option value="Outdoor">Outdoor</option>
+        </select></td>
+        </tr>
+
+	    <tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Floor</font></td>
+      	    <td><input type="text" name="floor" size="20"><p id="demo12"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">AP Custom Field 1</font></td>
+      	   	<td><input type="text" name="apcustomfield" size="20"><p id="demo13"></p></td>
+            
+
+      	   	<td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">RA</font></td>
+      	    <td><input type="text" name="ra" size="20"><p id="demo14"></p></td>
+            
+        </tr>
+
+        <tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Ckt ID</font></td>
+      	    <td><input type="text" name="cktid" size="20"><p id="demo15"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Bandwidth Mb</font></td>
+      	    <td><input type="text" name="bandwidthmb" size="20"><p id="demo16"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">B_H_FIBER_MW_DSL</font></td>
+      	   	<td width="12%">
+              <select name="bhfibremwdsl">
+                <option value="Fiber(FTTH/GPON)">Fiber(FTTH/GPON)</option>
+                <option value="UBR">UBR</option>
+                <option value="ADSL/VDSL">ADSL/VDSL</option>
+                <option value="ILP">ILP</option>
+                <option value="Microwave">Microwave</option>
+                <option value="4G-LTE">4G-LTE</option>
+                <option value="Others">Others</option>
+        </select></td>
+        </tr>
+
+        <tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Backhaul Vender</font></td>
+      	   	<td><input type="text" name="bhvendor" size="20"><p id="demo17"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Backhaul RA</font></td>
+      	   	<td><input type="text" name="bhra" size="20"><p id="demo18"></p></td>
+            
+
+		    <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Backhaul Circuit ID</font></td>
+      	   	<td><input type="text" name="bhcktid" size="20"><p id="demo19"></p></td>
+            
+
+        </tr>
+        <tr>
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Backhaul Bandwidth</font></td>
+      	   	<td><input type="text" name="bhbw" size="20"><p id="demo20"></p></td>
+            
+
+		    <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Backhaul Node Name</font></td>
+      	   	<td><input type="text" name="bhnodename" size="20"><p id="demo21"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Backhaul Port</font></td>
+      	   	<td><input type="text" name="bhport" size="20"><p id="demo22"></p></td>
+            
+
+        </tr>
+		<tr>
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">LSI Number</font></td>
+      	   	<td><input type="text" name="lsino" size="20"><p id="demo23"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">DSL CAF ID</font></td>
+      	   	<td><input type="text" name="dslcaf" size="20"><p id="demo24"></p></td>
+            
+
+      	   	<td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">DSL User ID</font></td>
+      	   	<td><input type="text" name="dsluser" size="20"><p id="demo25"></p></td>
+            
+
+        </tr>
+        <tr>
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">RSU Detail</font></td>
+      	   	<td><input type="text" name="rsu" size="20"><p id="demo26"></p></td>
+            
+
+      	   	<td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">RSU Port</font></td>
+      	   	<td><input type="text" name="rsuport" size="20"><p id="demo27"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">4G CPE WAN IP</font></td>
+      	   	<td><input type="text" name="wanip" size="20"><p id="demo28"></p></td>
+            
+
+        </tr>
+      	<tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Acquisition Owner</font></td>
+      	   	<td><input type="text" size="20" name="acquisitionowner"><p id="demo29"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Business Plan</font></td>
+      	   	<td>
+              <select name="bhfibremwdsl" style="width: 70%">
+                <option value="B2B">B2B</option>
+                <option value="B2C">B2C</option>
+            </select></td>
+      	   	<td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">SSID 1</font></td>
+      	    <td><input type="text" name="ssid1" size="20"><p id="demo30"></p></td>
+            
+
+        </tr>
+
+        <tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">SSID 2</font></td>
+      	    <td><input type="text" name="ssid2" size="20"><p id="demo31"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">SSID 3</font></td>
+      	    <td><input type="text" name="ssid3" size="20"><p id="demo32"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">SSID 4</font></td>
+      	    <td><input type="text" name="ssid4" size="20"><p id="demo33"></p></td>
+            
+
+        </tr>
+
+		<tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">SSID 5</font></td>
+      	    <td><input type="text" name="ssid5" size="20"><p id="demo34"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">SSID 6</font></td>
+      	   	<td><input type="text" name="ssid6" size="20"><p id="demo35"></p></td>
+            
+
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Contact Person</font></td>
+      	    <td><input type="text" name="contactperson" size="20"><p id="demo36"></p></td>
+            
+
+        </tr>
+        <tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Contact detail</font></td>
+      	    <td><input type="text" name="contactdetail" size="20"><p id="demo37"></p></td>
+            
+
+		   <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Start Date</font></td>
+      	    <td><input type="Date" name="startdate" size="20"><p id="demo38"></p></td>
+            
+
+        </tr>
+		
+        <tr>
+            
+		    <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Topology Diagram</font></td>
+      	    <td><input type="FILE"  name="topology_diagram"><p id="demo39"></p></td>
+            
+
+			<td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Upload AP Detail</font></td>
+      	    <td><input type="FILE"  name="ap_path"><p id="demo40"></p></td>
+            
+
+			<td><p>
+						<i><a href="downloadFormat.jsp">Download Format</a></i>
+						
+					</p>
+					</td>
+			
+        </tr>
+        <tr>
+            <td><font size="4" style="font-weight: bolder;color:black;" face="Times New Roman">Comment</font></td>
+      	    <td><input type="textarea" name="comments" size="4"><p id="demo41"></p>
+
+            </td>	
+            
+         </tr>
+      	<tr>
+      	<td></td>
+      	<td align="center"><button type="submit"  value="Update" class="btn btn-primary btn-md" style="background-color: red; color: black; font-weight: bolder;color:white; width:70%; margin-left: -30%;">Update</button></td>
+      	</tr>      
+        </table>
+      
+	    	</form>
+
+
+<script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
+</body>
+</html>

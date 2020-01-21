@@ -1,0 +1,2274 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<style type="text/css">
+		body{
+		margin: 0;
+
+		}
+
+
+		div {
+  max-width: 100%;
+  
+  position: absolute;
+}
+
+table {
+  position: relative;
+  border: 2px solid black;  
+}
+
+td, th {
+  padding:1.13em .85em 1.13em 1.13em;
+}
+
+thead th,tbody th {
+
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: rgb(113, 93, 89);
+  color: white;
+
+}
+
+thead th:first-child ,{
+  left: 0;
+  z-index: 1;
+
+}
+tbody th:first-child{
+     left: 0;
+  z-index: 0;
+
+}
+thead th:first-child+th,{
+  left: 7.5em; background: rgb(135,124,121);
+  z-index: 1;   
+  
+}
+tbody th {
+  position: sticky;
+  background: rgb(113, 93, 89);
+ 
+}
+.image{
+    height: 1.5em;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    
+}
+
+
+   .t1{
+      background: rgb(238,28,37);
+      color: white;
+      border: none;
+      width: 100%;
+      height: 10px;    
+    } 
+
+   .img1{
+    height: 36%;
+    width: 48%;
+   }
+
+  .th1{
+    width: 15%;
+    text-align: center;
+    padding: 0;
+  }
+
+  .th2{
+    width: 75%;
+    font-size: 150%;
+    text-align: center;
+    padding: 0;
+    padding-right: 10%;   
+  }
+  .th3{
+    width: 10%
+    padding: 0;
+  }
+      </style>
+
+<style type="text/css">
+[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.1s ease 0.5s;
+    visibility: visible;
+}
+[data-title]:after {
+    content: attr(data-title);
+    background-color: rgb(135,124,121);
+    color: white;
+    font-size: 150%;
+    position: absolute;
+    padding: 0.2em;
+    bottom: .5em;
+    left: 100%;
+    white-space: nowrap;
+    box-shadow: 1px 1px 3px #222222;
+    opacity: 0;
+    border: 1px solid #111111;
+    z-index: 99999;
+    visibility: hidden;
+}
+
+</style>
+  </head>
+  <body>
+  <div style="position: fixed; width: 100%; margin: 0;padding: 0;">          
+  <table class="t1">
+    <tr>
+      <td class="th1"><!-- <img src="aitel_white_logo.png" class="img1"> --><font style="font-size:200%;color: white;">TNL</font></td>
+      <td class="th2"><h2 style=" font-weight: 10%;">LATENCY LIVE STATUS</h2></td>
+      <td class="th3">DATE</td>
+    </tr>
+  </table>
+</div>
+<br><br><br><br><br>
+<div>
+<table cellspacing="0" border="1" style="width: 100%; font-weight: bolder;">
+<thead >
+    <tr align="center" style="width: 100%;">
+       <th rowspan="2" style="z-index: 1;left: 0"><b>CATEGORY</b></th>
+       <th class="thh thh2" style="  left: 8.25em; background: rgb(113, 93, 89);z-index: 1;"><b>LOCATION</b></th>
+       <th class="thh" colspan="5"><b>DELHI</b></th>
+       <th class="thh" colspan="2"><b>NOIDA</b></th>
+       <th class="thh" colspan="3"><b>CHENNAI</b></th>
+       <th class="thh" colspan="2"><b>MUMBAI</b></th>
+       <th class="thh" colspan="2"><b>MP</b></th>
+       <th class="thh"><b>LKO</b></th>
+       <th class="thh"><b>KOL</b></th>
+       <th class="thh"><b>MOH</b></th>
+       <th class="thh" colspan="3"><b>BANGLORE</b></th>
+       <th class="thh"><b>HYD</b></th>
+    </tr>
+    <tr align="center" >
+       <th class="thh thh2" style="top: 3.48em; left: 8.25em; background: rgb(135,124,121); z-index: 1;  background: rgb(135,124,121);"><b>BRAS</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>4</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>5</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>6</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>7</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>8</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>2</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>3</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>7</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>8</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>9</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>5</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>6</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>6</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>7</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>2</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>1</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>2</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>4</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>7</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>8</b></th>
+       <th class="thh" style="top: 3.48em; background: rgb(135,124,121);"><b>5</b></th>
+    </tr>
+</thead>
+<tbody align="center" style="font-size: 110%">
+<tr >
+         <th rowspan="6" style="vertical-align: middle"><h4 style=" font-weight: bolder; color: white;text-align:center;"><b>SOCIAL</b></h4></th>
+
+  <th class="image" data-title="GOOGLE" style="color: white; left: 7.5em; z-index: 0; background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\google.png);">
+</th>
+
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>4</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>36</td>
+    
+     <td>37</td>
+    
+     <td>12</td>
+    
+     <td>78</td>
+    
+     <td>16</td>
+    
+     <td>31</td>
+    
+     <td>9</td>
+    
+     <td>31</td>
+    
+     <td>--</td></tr>
+<tr>
+
+  <th class="image" data-title="mFACEBOOK" style="color: white;  left: 7.5em;
+  z-index: 0; background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\fblit.jpg);"></th>
+
+
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>4</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>28</td>
+    
+     <td>1</td>
+    
+     <td>27</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>17</td>
+    
+     <td>16</td>
+    
+     <td>36</td>
+    
+     <td>36</td>
+    
+     <td>40</td>
+    
+     <td>8</td>
+    
+     <td>9</td>
+    
+     <td>7</td>
+    
+     <td>--</td>
+    
+
+</tr>
+     <tr>
+
+<th class="image image-responsive" data-title="FACEBOOK" style="color: white;  left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\facebook.jpg);
+  z-index: 0;"></th>
+
+
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>23</td>
+    
+     <td>22</td>
+    
+     <td>27</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>17</td>
+    
+     <td>16</td>
+    
+     <td>36</td>
+    
+     <td>32</td>
+    
+     <td>40</td>
+    
+     <td>6</td>
+    
+     <td>8</td>
+    
+     <td>6</td>
+    
+     <td>--</td>
+    
+
+</tr>
+    
+      <tr>
+
+<th class="image image-responsive" data-title="WHATSAPP" style="color: white; left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\whatsapp.png);
+  z-index: 0;"></th>
+
+
+     <td>31</td>
+    
+     <td>31</td>
+    
+     <td>27</td>
+    
+     <td>28</td>
+    
+     <td>26</td>
+    
+     <td>26</td>
+    
+     <td>27</td>
+    
+     <td>28</td>
+    
+     <td>34</td>
+    
+     <td>22</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>17</td>
+    
+     <td>16</td>
+    
+     <td>36</td>
+    
+     <td>31</td>
+    
+     <td>42</td>
+    
+     <td>37</td>
+    
+     <td>41</td>
+    
+     <td>38</td>
+    
+     <td>--</td>
+    
+
+</tr>
+      <tr>
+
+<th class="image image-responsive" data-title="INSTAGRAM" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\instagram.jpg);
+  z-index: 0;"></th>
+
+
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>21</td>
+    
+     <td>28</td>
+    
+     <td>24</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>15</td>
+    
+     <td>16</td>
+    
+     <td>35</td>
+    
+     <td>31</td>
+    
+     <td>41</td>
+    
+     <td>6</td>
+    
+     <td>8</td>
+    
+     <td>7</td>
+    
+     <td>--</td>
+    
+
+</tr>
+      <tr>
+<th class="image image-responsive" data-title="TWITTER" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\twitter.jpg);
+  z-index: 0;"></th>
+
+
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>29</td>
+    
+     <td>29</td>
+    
+     <td>288</td>
+    
+     <td>36</td>
+    
+     <td>16</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>1</td>
+    
+     <td>--</td>
+    
+
+</tr>
+
+      <tr>
+<th style="vertical-align: middle;"><h4 style=" font-weight: bolder; color: white;text-align:center;">SPORTS</h4></th>
+<th class="image image-responsive" data-title="CRIKBUZZ" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\crickbuzz.jpg);
+  z-index: 0;"></th>
+
+
+     <td>27</td>
+    
+     <td>28</td>
+    
+     <td>32</td>
+    
+     <td>31</td>
+    
+     <td>28</td>
+    
+     <td>24</td>
+    
+     <td>27</td>
+    
+     <td>30</td>
+    
+     <td>28</td>
+    
+     <td>26</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>37</td>
+    
+     <td>34</td>
+    
+     <td>38</td>
+    
+     <td>55</td>
+    
+     <td>42</td>
+    
+     <td>30</td>
+    
+     <td>35</td>
+    
+     <td>28</td>
+    
+     <td>--</td>
+    
+
+</tr>
+
+     <tr>
+<th rowspan="6" bgcolor="silver" style="vertical-align:middle;" ><h4 style=" font-weight: bolder; color: white;text-align:center;">GAMES</h4></th>
+<th class="image image-responsive" data-title="EA" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\ea.png);
+  z-index: 0;"></th>
+
+
+     <td>4</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>88</td>
+    
+     <td>94</td>
+    
+     <td>42</td>
+    
+     <td>70</td>
+    
+     <td>10</td>
+    
+     <td>26</td>
+    
+     <td>14</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>--</td>
+    
+
+</tr>
+      <tr>
+<th class="image image-responsive" data-title="PUBG" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\pubg.jpg);
+  z-index: 0;"></th>
+
+
+     <td>105</td>
+    
+     <td>103</td>
+    
+     <td>107</td>
+    
+     <td>211</td>
+    
+     <td>109</td>
+    
+     <td>103</td>
+    
+     <td>102</td>
+    
+     <td>289</td>
+    
+     <td>281</td>
+    
+     <td>280</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>49</td>
+    
+     <td>34</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>--</td>
+    
+
+</tr>
+      <tr>
+<th class="image image-responsive" data-title="ZAPAK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\zapak.jpg);
+  z-index: 0;"></th>
+
+
+    <td>1</td>
+    
+    <td>7</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>7</td>
+    
+    <td>6</td>
+    
+    <td>9</td>
+    
+    <td>24</td>
+    
+    <td>34</td>
+    
+    <td>154</td>
+    
+    <td>59</td>
+    
+    <td>57</td>
+    
+    <td>100</td>
+    
+    <td>59</td>
+    
+    <td>26</td>
+    
+    <td>31</td>
+    
+    <td>23</td>
+    
+    <td>--</td>
+    
+
+</tr>
+     <tr>
+<th class="image image-responsive" data-title="GAMEGURU" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\gameguru.png);
+  z-index: 0;"></th>
+
+
+    <td>4</td>
+    
+    <td>3</td>
+    
+    <td>4</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>4</td>
+    
+    <td>34</td>
+    
+    <td>32</td>
+    
+    <td>32</td>
+    
+    <td>130</td>
+    
+    <td>130</td>
+    
+    <td>267</td>
+    
+    <td>280</td>
+    
+    <td>74</td>
+    
+    <td>42</td>
+    
+    <td>288</td>
+    
+    <td>39</td>
+    
+    <td>41</td>
+    
+    <td>37</td>
+    
+    <td>--</td>
+    
+</tr>
+      <tr>
+<th class="image image-responsive" data-title="SUPERSELL" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\supersell.jpg);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>65</td>
+    
+     <td>56</td>
+    
+     <td>9</td>
+    
+     <td>32</td>
+    
+     <td>14</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+<th class="image image-responsive" data-title="RUMMYCIRCLE" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\rummycircle.png);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>47</td>
+    
+     <td>52</td>
+    
+     <td>11</td>
+    
+     <td>33</td>
+    
+     <td>14</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>--</td>
+    
+
+</tr> 
+ 
+<tr>  
+
+<th bgcolor="silver" rowspan="14" style="vertical-align: middle;"><h4 style=" font-weight: bolder; color: white;text-align:center;">MEDIA</h4></th>
+<th class="image image-responsive" data-title="YOUTUBE" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\youtube.png);
+  z-index: 0;"></th>
+
+
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>4</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>4</td>
+    
+     <td>2</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>66</td>
+    
+     <td>60</td>
+    
+     <td>12</td>
+    
+     <td>35</td>
+    
+     <td>15</td>
+    
+     <td>31</td>
+    
+     <td>10</td>
+    
+     <td>30</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="NETFLIX" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\netflix.jpg);
+  z-index: 0;"></th>
+
+
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>20</td>
+    
+     <td>22</td>
+    
+     <td>22</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>47</td>
+    
+     <td>37</td>
+    
+     <td>17</td>
+    
+     <td>106</td>
+    
+     <td>107</td>
+    
+     <td>106</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="HOTSTAR" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\hotstar.jpg);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>33</td>
+    
+     <td>33</td>
+    
+     <td>33</td>
+    
+     <td>16</td>
+    
+     <td>16</td>
+    
+     <td>178</td>
+    
+     <td>178</td>
+    
+     <td>11</td>
+    
+     <td>36</td>
+    
+     <td>246</td>
+    
+     <td>73</td>
+    
+     <td>75</td>
+    
+     <td>73</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="ALT_BALAJI" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\altbalaji.jpg);
+  z-index: 0;"></th>
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>27</td>
+    
+     <td>27</td>
+    
+     <td>23</td>
+    
+     <td>4</td>
+    
+     <td>3</td>
+    
+     <td>53</td>
+    
+     <td>48</td>
+    
+     <td>9</td>
+    
+     <td>35</td>
+    
+     <td>14</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>--</td>
+    
+</tr>
+<tr>
+<th class="image image-responsive" data-title="PRIME VIDEO" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\primevideo.jpg);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>4</td>
+    
+     <td>3</td>
+    
+     <td>147</td>
+    
+     <td>146</td>
+    
+     <td>9</td>
+    
+     <td>32</td>
+    
+     <td>14</td>
+    
+     <td>7</td>
+    
+     <td>10</td>
+    
+     <td>7</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="SMULE" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\smule.jpg);
+  z-index: 0;"></th>
+
+
+     <td>29</td>
+    
+     <td>31</td>
+    
+     <td>29</td>
+    
+     <td>28</td>
+    
+     <td>32</td>
+    
+     <td>24</td>
+    
+     <td>28</td>
+    
+     <td>205</td>
+    
+     <td>211</td>
+    
+     <td>211</td>
+    
+     <td>232</td>
+    
+     <td>240</td>
+    
+     <td>257</td>
+    
+     <td>250</td>
+    
+     <td>266</td>
+    
+     <td>246</td>
+    
+     <td>275</td>
+    
+     <td>222</td>
+    
+     <td>253</td>
+    
+     <td>241</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="TIKTOK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\tiktok.png);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>29</td>
+    
+     <td>28</td>
+    
+     <td>34</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>46</td>
+    
+     <td>54</td>
+    
+     <td>10</td>
+    
+     <td>28</td>
+    
+     <td>14</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>1</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+<th class="image image-responsive" data-title="ZEE 5" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\zee5.jpg);
+  z-index: 0;"></th>
+
+
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>152</td>
+    
+     <td>152</td>
+    
+     <td>154</td>
+    
+     <td>90</td>
+    
+     <td>93</td>
+    
+     <td>95</td>
+    
+     <td>93</td>
+    
+     <td>12</td>
+    
+     <td>37</td>
+    
+     <td>14</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="VIU" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\viu.png);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>23</td>
+    
+     <td>23</td>
+    
+     <td>24</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>55</td>
+    
+     <td>58</td>
+    
+     <td>9</td>
+    
+     <td>33</td>
+    
+     <td>14</td>
+    
+     <td>7</td>
+    
+     <td>9</td>
+    
+     <td>7</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="SPUUL" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\spuul.png);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>3</td>
+    
+     <td>48</td>
+    
+     <td>54</td>
+    
+     <td>11</td>
+    
+     <td>33</td>
+    
+     <td>14</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="HOOQ" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\hooq.jpg);
+  z-index: 0;"></th>
+
+
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>0</td>
+    
+     <td>45</td>
+    
+     <td>36</td>
+    
+     <td>41</td>
+    
+     <td>32</td>
+    
+     <td>28</td>
+    
+     <td>62</td>
+    
+     <td>49</td>
+    
+     <td>9</td>
+    
+     <td>26</td>
+    
+     <td>14</td>
+    
+     <td>57</td>
+    
+     <td>54</td>
+    
+     <td>64</td>
+    
+     <td>--</td>
+    
+
+</tr>
+
+<tr>
+
+<th class="image image-responsive" data-title="EROSNOW" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\erosnow.jpg);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>64</td>
+    
+     <td>63</td>
+    
+     <td>9</td>
+    
+     <td>35</td>
+    
+     <td>152</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="SONY LIVE" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\soniliv.jpg);
+  z-index: 0;"></th>
+
+
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>4</td>
+    
+    <td>1</td>
+    
+    <td>3</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>5</td>
+    
+    <td>3</td>
+    
+    <td>54</td>
+    
+    <td>53</td>
+    
+    <td>9</td>
+    
+    <td>36</td>
+    
+    <td>117</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="VOOT" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\voot.jpg);
+  z-index: 0;"></th>
+
+
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>26</td>
+    
+    <td>27</td>
+    
+    <td>22</td>
+    
+    <td>30</td>
+    
+    <td>32</td>
+    
+    <td>62</td>
+    
+    <td>54</td>
+    
+    <td>35</td>
+    
+    <td>0</td>
+    
+    <td>15</td>
+    
+    <td>1</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>--</td>
+    
+
+</tr>
+
+
+
+<tr>
+<th rowspan="8" bgcolor="silver" style="vertical-align:middle;" bgcolor="white"><h4 style=" font-weight: bolder; color: white;text-align:center;">BANK</h4></th>
+<th class="image image-responsive" data-title="AXIS BANK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\axisbank.png);
+  z-index: 0;"></th>
+
+
+    <td>2</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>33</td>
+    
+    <td>34</td>
+    
+    <td>33</td>
+    
+    <td>22</td>
+    
+    <td>41</td>
+    
+    <td>92</td>
+    
+    <td>94</td>
+    
+    <td>238</td>
+    
+    <td>50</td>
+    
+    <td>113</td>
+    
+    <td>72</td>
+    
+    <td>75</td>
+    
+    <td>72</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="HDFC BANK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\hdfc.png);
+  z-index: 0;"></th>
+
+
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>37</td>
+    
+    <td>38</td>
+    
+    <td>37</td>
+    
+    <td>262</td>
+    
+    <td>260</td>
+    
+    <td>57</td>
+    
+    <td>45</td>
+    
+    <td>11</td>
+    
+    <td>27</td>
+    
+    <td>15</td>
+    
+    <td>65</td>
+    
+    <td>46</td>
+    
+    <td>58</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+<th class="image image-responsive" data-title="INDIAN BANK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\indianbank.jpg);
+  z-index: 0;"></th>
+
+
+    <td>47</td>
+    
+    <td>52</td>
+    
+    <td>50</td>
+    
+    <td>49</td>
+    
+    <td>51</td>
+    
+    <td>47</td>
+    
+    <td>49</td>
+    
+    <td>4</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>26</td>
+    
+    <td>28</td>
+    
+    <td>0</td>
+    
+    <td>0</td>
+    
+    <td>57</td>
+    
+    <td>38</td>
+    
+    <td>62</td>
+    
+    <td>33</td>
+    
+    <td>36</td>
+    
+    <td>32</td>
+    
+    <td>--</td>
+    
+
+</tr>
+
+<tr>
+<th class="image image-responsive" data-title="ICICI BANK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\icicibank.jpg);
+  z-index: 0;"></th>
+
+
+    <td>37</td>
+    
+    <td>36</td>
+    
+    <td>42</td>
+    
+    <td>46</td>
+    
+    <td>46</td>
+    
+    <td>37</td>
+    
+    <td>36</td>
+    
+    <td>33</td>
+    
+    <td>34</td>
+    
+    <td>33</td>
+    
+    <td>28</td>
+    
+    <td>25</td>
+    
+    <td>94</td>
+    
+    <td>93</td>
+    
+    <td>62</td>
+    
+    <td>50</td>
+    
+    <td>113</td>
+    
+    <td>27</td>
+    
+    <td>27</td>
+    
+    <td>37</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+<th class="image image-responsive" data-title="PAYTM PAYMENT BANK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\paytmbank.jpg);
+  z-index: 0;"></th>
+
+
+    <td>46</td>
+    
+    <td>42</td>
+    
+    <td>37</td>
+    
+    <td>36</td>
+    
+    <td>38</td>
+    
+    <td>41</td>
+    
+    <td>46</td>
+    
+    <td>34</td>
+    
+    <td>32</td>
+    
+    <td>33</td>
+    
+    <td>30</td>
+    
+    <td>48</td>
+    
+    <td>164</td>
+    
+    <td>34</td>
+    
+    <td>65</td>
+    
+    <td>50</td>
+    
+    <td>55</td>
+    
+    <td>41</td>
+    
+    <td>40</td>
+    
+    <td>38</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+<th class="image image-responsive" data-title="UNITED BANK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\unitedbank.png);
+  z-index: 0;"></th>
+
+
+    <td>3</td>
+    
+    <td>4</td>
+    
+    <td>4</td>
+    
+    <td>2</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>1</td>
+    
+    <td>50</td>
+    
+    <td>48</td>
+    
+    <td>56</td>
+    
+    <td>32</td>
+    
+    <td>30</td>
+    
+    <td>64</td>
+    
+    <td>57</td>
+    
+    <td>13</td>
+    
+    <td>28</td>
+    
+    <td>17</td>
+    
+    <td>50</td>
+    
+    <td>45</td>
+    
+    <td>50</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+<th class="image image-responsive" data-title="CITI BANK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\citibank.jpg);
+  z-index: 0;"></th>
+
+
+    <td>1</td>
+    
+    <td>2</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>2</td>
+    
+    <td>1</td>
+    
+    <td>2</td>
+    
+    <td>1</td>
+    
+    <td>2</td>
+    
+    <td>18</td>
+    
+    <td>15</td>
+    
+    <td>73</td>
+    
+    <td>55</td>
+    
+    <td>10</td>
+    
+    <td>34</td>
+    
+    <td>16</td>
+    
+    <td>49</td>
+    
+    <td>51</td>
+    
+    <td>52</td>
+    
+    <td>--</td>
+    
+
+</tr>
+
+
+<tr>
+<th class="image image-responsive" data-title="SATANDERED BANK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\standeredbank.jpg);
+  z-index: 0;"></th>
+
+
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>3</td>
+    
+    <td>265</td>
+    
+    <td>250</td>
+    
+    <td>18</td>
+    
+    <td>16</td>
+    
+    <td>35</td>
+    
+    <td>38</td>
+    
+    <td>41</td>
+    
+    <td>9</td>
+    
+    <td>8</td>
+    
+    <td>7</td>
+    
+    <td>--</td>
+    
+
+</tr>
+
+<tr>
+<th rowspan="4" bgcolor="silver" style="vertical-align:middle;" bgcolor="white"><h4 style=" font-weight: bolder; color: white;text-align:center;">E-WALLET</h4></th>
+<th class="image image-responsive" data-title="RAZORPAY" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\razorpay.png);
+  z-index: 0;"></th>
+
+
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>2</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>1</td>
+    
+     <td>2</td>
+    
+     <td>12</td>
+    
+     <td>3</td>
+    
+     <td>57</td>
+    
+     <td>56</td>
+    
+     <td>9</td>
+    
+     <td>34</td>
+    
+     <td>14</td>
+    
+     <td>2</td>
+    
+     <td>3</td>
+    
+     <td>2</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="MOBIKWIK" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\mobikwik.png);
+  z-index: 0;"></th>
+
+
+     <td>28</td>
+    
+     <td>29</td>
+    
+     <td>29</td>
+    
+     <td>29</td>
+    
+     <td>29</td>
+    
+     <td>27</td>
+    
+     <td>25</td>
+    
+     <td>69</td>
+    
+     <td>68</td>
+    
+     <td>67</td>
+    
+     <td>118</td>
+    
+     <td>116</td>
+    
+     <td>16</td>
+    
+     <td>14</td>
+    
+     <td>37</td>
+    
+     <td>99</td>
+    
+     <td>45</td>
+    
+     <td>25</td>
+    
+     <td>26</td>
+    
+     <td>25</td>
+    
+     <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="AMAZON PAY" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\amazonpay.png);
+  z-index: 0;"></th>
+
+
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>2</td>
+    
+    <td>0</td>
+    
+    <td>0</td>
+    
+    <td>0</td>
+    
+    <td>4</td>
+    
+    <td>4</td>
+    
+    <td>148</td>
+    
+    <td>148</td>
+    
+    <td>10</td>
+    
+    <td>166</td>
+    
+    <td>171</td>
+    
+    <td>56</td>
+    
+    <td>56</td>
+    
+    <td>49</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="CC AVENUE" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\ccavenue.png);
+  z-index: 0;"></th>
+
+
+    <td>2</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>38</td>
+    
+    <td>36</td>
+    
+    <td>42</td>
+    
+    <td>23</td>
+    
+    <td>20</td>
+    
+    <td>56</td>
+    
+    <td>60</td>
+    
+    <td>11</td>
+    
+    <td>27</td>
+    
+    <td>16</td>
+    
+    <td>49</td>
+    
+    <td>58</td>
+    
+    <td>63</td>
+    
+    <td>--</td>
+    
+
+</tr>
+
+<tr>
+
+<th rowspan="3" bgcolor="silver"><h4 style="margin-top: 30%; font-weight: bolder; color: white;text-align:center; margin-top: 50%;">E-COMMERCE</h4></th>
+<th class="image image-responsive" data-title="AMAZON" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\amazon.png);
+  z-index: 0;"></th>
+
+
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>2</td>
+    
+    <td>1</td>
+    
+    <td>272</td>
+    
+    <td>250</td>
+    
+    <td>279</td>
+    
+    <td>270</td>
+    
+    <td>248</td>
+    
+    <td>304</td>
+    
+    <td>304</td>
+    
+    <td>274</td>
+    
+    <td>297</td>
+    
+    <td>262</td>
+    
+    <td>266</td>
+    
+    <td>278</td>
+    
+    <td>253</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+
+<th class="image image-responsive" data-title="MAKE MY TRIP" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\makemytrip.jpg);
+  z-index: 0;"></th>
+
+
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>23</td>
+    
+    <td>23</td>
+    
+    <td>29</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>22</td>
+    
+    <td>20</td>
+    
+    <td>38</td>
+    
+    <td>33</td>
+    
+    <td>42</td>
+    
+    <td>34</td>
+    
+    <td>23</td>
+    
+    <td>23</td>
+    
+    <td>--</td>
+    
+
+</tr>
+<tr>
+<th class="image image-responsive" data-title="MONEY CONTROL" style="color: white;left: 7.5em;  background-image: url(C:\\Users\\Om\\Desktop\\INTERNSHIP_PROJECT\\DAY_23\\icons\\moneycontrol.png);
+  z-index: 0;"></th>
+
+
+    <td>2</td>
+    
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>3</td>
+    
+    <td>2</td>
+    
+    <td>2</td>
+    
+    <td>1</td>
+    
+    <td>1</td>
+    
+    <td>2</td>
+    
+    <td>110</td>
+    
+    <td>111</td>
+    
+    <td>72</td>
+    
+    <td>61</td>
+    
+    <td>109</td>
+    
+    <td>35</td>
+    
+    <td>14</td>
+    
+    <td>162</td>
+    
+    <td>57</td>
+    
+    <td>162</td>
+    
+    <td>--</td>
+    
+</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

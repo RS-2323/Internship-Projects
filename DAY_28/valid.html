@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <title></title>
+        <script type="text/javascript">
+        function Check_Address(){
+            var mac1=document.forms["Macform"]["mac1"]
+            var mac2=document.forms["Macform"]["mac2"]
+            var mac3=document.forms["Macform"]["mac3"]
+            
+
+        if (mac1.value=="") {
+            // window.alert("Please enter your MAC Address");
+            document.getElementById("demo1").innerHTML = "enter field1";
+           
+            
+            mac1.focus();
+
+           
+        
+        }
+        else if (mac2.value=="") {
+             document.getElementById("demo2").innerHTML = "enter field2";
+              mac2.focus();
+        }
+        else if(mac3.value==""){
+            document.getElementById("demo3").innerHTML = "enter field3";
+             mac3.focus();
+        }
+        else{
+            // window.alert("Get MAC Address Sucessfully");
+
+            document.getElementById("demo").innerHTML = "done";
+            
+        }
+return false;
+    }   
+    </script>
+</head>
+<body>
+<center>
+        <form id="login-form" name="Macform" method="POST" action="" onsubmit="return Check_Address()">
+            <div class="container">
+                <center style="margin-top: 7%;">
+                    <label style="font-size: 27px;">
+                        <b>ENTER :</b>
+                    </label><br><br>
+                    <input type="text" placeholder="Enter1 ......" name="mac1" required="" class="form-control"><small id="demo1" class="form-text text-muted"></small>
+                    <input type="text" placeholder="Enter2 ......" name="mac2" required="" class="form-control"><small id="demo2" class="form-text text-muted"></small><br>
+                    <input type="text" placeholder="Enter3 ......" name="mac3" required="" class="form-control"><small id="demo3" class="form-text text-muted"></small><br>
+                    <small id="demo" class="form-text text-muted"></small>
+                    <input class="button"type="button" name="sbmit" value="submit" onclick="Check_Address()"><br>
+                    
+
+                </center>
+            </div>
+        </form>
+    </body>
+</center>
+</body>
+</html>
+</html>

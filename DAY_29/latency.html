@@ -1,0 +1,1174 @@
+<html>
+<title>LATENCY REPORT</title>
+<link rel="icon" href="logo.JPG" type="image/gif" sizes="16x16">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style/w3.css">
+<link rel="stylesheet" href="style/bootstrap.min.css">
+<link rel="stylesheet" href="style/font-awesome.min.css">
+<script type="text/javascript" src="js/date_time.js"></script>
+<script src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+<head>
+<style>
+/* td {
+padding: 5px;
+} */
+.flash-button{
+background:red;
+padding:5px 10px;
+color:#fff;
+border:none;
+border-radius:5px;
+animation-name: flash;
+animation-duration: 1s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+//Firefox 1+
+-webkit-animation-name: flash;
+-webkit-animation-duration: 1s;
+-webkit-animation-timing-function: linear;
+-webkit-animation-iteration-count: infinite;
+//Safari 3-4
+-moz-animation-name: flash;
+-moz-animation-duration: 1s;
+-moz-animation-timing-function: linear;
+-moz-animation-iteration-count: infinite;
+}
+.border{
+border : 1px solid black;
+}
+table,th,td{
+border : 1px solid black;
+}
+@keyframes flash {
+0% { opacity: 1.0; }
+50% { opacity: 0.0; }
+100% { opacity: 1.0; }
+}
+//Firefox 1+
+@-webkit-keyframes flash {
+0% { opacity: 1.0; }
+50% { opacity: 0.0; }
+100% { opacity: 1.0; }
+}
+//Safari 3-4
+@-moz-keyframes flash {
+0% { opacity: 1.0; }
+50% { opacity: 0.0; }
+100% { opacity: 1.0; }
+}
+a {
+text-decoration:none;
+}
+[href='https://canvasjs.com/']{ visibility:hidden; display: none }
+th{
+color:blue;
+}
+.header {
+}
+.content {
+}
+.sticky {
+position: fixed;
+top: 0;
+width: 100%;
+}
+.sticky + .content {
+padding-top: 102px;
+}
+.wrapper{
+max-width: 100%;
+height: 60px;
+text-align: right;
+}
+.marquee {
+white-space: nowrap;
+-webkit-animation: rightThenLeft 4s linear;
+}
+#clone{
+margin-top: 5.58em;
+margin-left: 0.1em;
+}
+</style>
+</head>
+<body>
+<div class="header" id="myHeader">
+<header class="w3-container w3-red">
+<div class="w3-row w3-container">
+<div class="w3-col" style="width:22%">
+<h5><img src="airtel-new-logo-hori-770x285.jpg" class="w3-round-xxlarge" alt="airtel_logo" width=120px height=70px></h5>
+</div>
+<div class="w3-col" style="width:38%">
+<h1 class="w3-right w3-xxlarge"><b>LATENCY LIVE STATUS</b></h1>
+</div>
+<div class="w3-col" style="width:40%">
+<h4 class="w3-right w3-large"><b>Last Scan: 26-March-2019 11:37:04</b></h4>
+</div>
+</div>
+</header>
+</div>
+<div id="table-container" class="table-responsive">
+<table id="maintable" class="table t2">
+<thead>
+<tr style="background: rgb(113, 93, 89);border-bottom: 3px solid black; border-top: 3px solid black;">
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>CATEGORY</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>SITE NAME</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>DELHI</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>NOIDA</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>CHENNAI</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>MUMBAI</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>MADHYA PRADESH</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>LUCKNOW</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>KOLKATA</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>MOHALI</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>BANGLORE</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>HAYEDRABAD</b></td>
+<!-- <td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>MUM-5</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>MUM-6</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>MP-6</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>MP-7</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>LKO-2</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>KOL-1</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>MOH-2</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>BLR-4</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>BLR-7</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>BLR-8</b></td>
+<td class="th3" style="margin-top: 10%;color: white; text-align:center;"><b>HYD-5</b></td> -->
+</tr>
+</thead>
+<tbody>
+<tr>
+<td rowspan="6" bgcolor="white"><h4 style="margin-top: 77%; font-weight: bolder; color:blue;text-align:center;"><b>SOCIAL</b></h4></td>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">GOOGLE</td>
+<!-- <td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">52</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">MOBILE FACEBOOK</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">FACEBOOK</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">5</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">18</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">WHATSAPP</td>
+<!-- <td style="text-align:center">32</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">41</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">46</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">37</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">INSTAGRAM</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">51</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">19</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">TWITTER</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">36</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">41</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td bgcolor="white"><h4 style="margin-top: 0%; font-weight: bolder; color:blue;text-align:center;">SPORTS</h4></td>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">CRICBUZZ</td>
+<!-- <td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">67</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td rowspan="6" style="vertical-align:middle;" bgcolor="white"><h4 style=" font-weight: bolder; color:blue;text-align:center;">GAMES</h4></td>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">EA</td>
+<!-- <td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">91</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">71</td>
+<td style="text-align:center">74</td>
+<td style="text-align:center">73</td>
+<td style="text-align:center">63</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">PUBG</td>
+<!-- <td style="text-align:center">112</td>
+<td style="text-align:center">121</td>
+<td style="text-align:center">118</td>
+<td style="text-align:center">226</td>
+<td style="text-align:center">205</td>
+<td style="text-align:center">119</td>
+<td style="text-align:center">119</td>
+<td style="text-align:center">284</td>
+<td style="text-align:center">278</td>
+<td style="text-align:center">271</td>
+<td style="text-align:center">254</td>
+ --><td style="text-align:center">270</td>
+<td style="text-align:center">312</td>
+<td style="text-align:center">319</td>
+<td style="text-align:center">53</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">345</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">15</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">ZAPAK</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">39</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">59</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">GAMEGURU</td>
+<!-- <td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">62</td>
+<td style="text-align:center">62</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">SUPERCELL</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">RUMMY CIRCLE</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">49</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">18</td>
+</tr>
+<tr>
+<td bgcolor="white" rowspan="13"><h4 style="margin-top: 222%; font-weight: bolder; color:blue;text-align:center;">MEDIA</h4></td>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">YOUTUBE</td>
+<!-- <td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">29</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">NETFLIX</td>
+<!-- <td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">1</td>
+ --><td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">39</td>
+<td style="text-align:center">55</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">14</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">HOTSTAR</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">ALT-BALAJI</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">65</td>
+<td style="text-align:center">18</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">15</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">PRIME VIDEOS</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">4</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">TIKTOK</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+ --><td style="text-align:center">4</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">ZEE-5</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">251</td>
+<td style="text-align:center">246</td>
+<td style="text-align:center">252</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">58</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">VIU</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">1</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">SPUUL</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">57</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">18</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">HOOQ</td>
+<!-- <td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">1</td>
+ --><td style="text-align:center">1</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">42</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">EROSNOW</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">17</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">SONYLIV</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">30</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">VOOT</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">87</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td rowspan="8" style="vertical-align:middle;" bgcolor="white"><h4 style=" font-weight: bolder; color:blue;text-align:center;">BANK</h4></td>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">AXIS BANK</td>
+<!-- <td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">HDFC BANK</td>
+<!-- <td style="text-align:center">87</td>
+<td style="text-align:center">80</td>
+<td style="text-align:center">79</td>
+<td style="text-align:center">79</td>
+<td style="text-align:center">89</td>
+<td style="text-align:center">80</td>
+<td style="text-align:center">79</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">65</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">92</td>
+<td style="text-align:center">69</td>
+<td style="text-align:center">93</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">18</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">INDIAN BANK</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">61</td>
+<td style="text-align:center">70</td>
+<td style="text-align:center">69</td>
+<td style="text-align:center">29</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">34</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">ICICI BANK</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">27</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">PAYTM PAYMENTS BANK</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">1</td>
+ --><td style="text-align:center">1</td>
+<td style="text-align:center">160</td>
+<td style="text-align:center">37</td>
+<td style="text-align:center">46</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">UNITED BANK OF BANK</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">5</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">31</td>
+ --><td style="text-align:center">25</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">31</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">29</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">CITI BANK</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">17</td>
+ --><td style="text-align:center">21</td>
+<td style="text-align:center">47</td>
+<td style="text-align:center">39</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">27</td>
+<td style="text-align:center">30</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">12</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">STANDARD CHARTERED BANK</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">15</td>
+</tr>
+<tr>
+<td rowspan="4" style="vertical-align:middle;" bgcolor="white"><h4 style=" font-weight: bolder; color:blue;text-align:center;">E-WALLET</h4></td>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">RAZORPAY</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">14</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">MOBIKWIK</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">14</td>
+<td style="text-align:center">23</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">16</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">AMAZON PAY</td>
+<!-- <td style="text-align:center">3</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">3</td>
+ --><td style="text-align:center">3</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">37</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">13</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">CC AVENUE</td>
+<!-- <td style="text-align:center">7</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">33</td>
+<td style="text-align:center">130</td>
+ --><td style="text-align:center">130</td>
+<td style="text-align:center">66</td>
+<td style="text-align:center">62</td>
+<td style="text-align:center">12</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">37</td>
+<td style="text-align:center">40</td>
+<td style="text-align:center">37</td>
+<td style="text-align:center">38</td>
+</tr>
+<tr>
+<td rowspan="3" bgcolor="white"><h4 style="margin-top: 30%; font-weight: bolder; color:blue;text-align:center; margin-top: 50%;">E-COMMERCE</h4></td>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">AMAZON</td>
+<!-- <td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">9</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">39</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">19</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">7</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">6</td>
+<td style="text-align:center">39</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">MAKE MY TRIP</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">28</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">17</td>
+<td style="text-align:center">34</td>
+<td style="text-align:center">10</td>
+<td style="text-align:center">26</td>
+<td style="text-align:center">15</td>
+<td style="text-align:center">20</td>
+<td style="text-align:center">21</td>
+<td style="text-align:center">22</td>
+<td style="text-align:center">17</td>
+</tr>
+<tr>
+<td style="color: #0199f5;font-size: 110%;font-weight: 0;text-align:center;">MONEY CONTROL</td>
+<!-- <td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">3</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">2</td>
+ --><td style="text-align:center">2</td>
+<td style="text-align:center">35</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">11</td>
+<td style="text-align:center">24</td>
+<td style="text-align:center">13</td>
+<td style="text-align:center">38</td>
+<td style="text-align:center">41</td>
+<td style="text-align:center">39</td>
+<td style="text-align:center">14</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="bottom_anchor" style="width: 100%;"></div>
+<script type="text/javascript">
+function moveScroll(){
+var scroll = $(window).scrollTop();
+var anchor_top = $("#maintable").offset().top;
+var anchor_bottom = $("#bottom_anchor").offset().top;
+if (scroll>anchor_top && scroll<anchor_bottom) {
+clone_table = $("#clone");
+if(clone_table.length == 0){
+clone_table = $("#maintable").clone();
+clone_table.attr('id', 'clone');
+clone_table.css({position:'fixed',
+'pointer-events': 'none',
+top:0});
+clone_table.width($("#maintable").width());
+$("#table-container").append(clone_table);
+$("#clone").css({visibility:'hidden'});
+$("#clone thead").css({visibility:'visible', 'pointer-events':'auto'});
+}
+} else {
+$("#clone").remove();
+}
+}
+$(window).scroll(moveScroll);
+</script>
+<script>
+window.onscroll = function() {myFunction()};
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+function myFunction() {
+if (window.pageYOffset > sticky) {
+header.classList.add("sticky");
+} else {
+header.classList.remove("sticky");
+}
+}
+</script>
+<input type="submit" id="addButton" value="Add" style="display: none;">
+</body>
+

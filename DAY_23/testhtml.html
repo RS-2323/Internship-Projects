@@ -1,0 +1,1769 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"></script>
+ <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"></script>
+ <style type="text/css">
+
+
+th, td {
+    padding:25px 27px;;
+    border:1px solid #000;
+}
+thead, tfoot {
+    background:#f9f9f9;
+    display:table;
+    width:100%;
+    position: relative;
+    
+}
+tbody {
+/*    height:40em;
+*/    overflow:auto;
+    overflow-x:hidden;
+    display:block;
+    width:100%;
+}
+
+ </style>
+</head>
+<body>
+<!-- <font color=#000000><b>USER: PMCNOC</b></	font> -->
+
+    	 <div style="position: fixed; margin-top: 0px;background-color:rgb(238,28,37); height: 4.5em;width: 100%;"><b><font size="5" color='white'  face="Bookman oldstyle" style="margin-top: 3%"><center style="margin-top: 2%;"> WI-FI Detail</center></font></b><img src="https://s3-ap-southeast-1.amazonaws.com/bsy/iportal/images/airtel-logo-white-text-horizontal.jpg" style=" width:10%; height:3em; position: absolute; margin-left: 3%;margin-top: -4%; "></div><br><br><br>
+    <table border="2" cellspacing="0" cellpadding="0" bgcolor="#F0F0F0" style="position:;table-layout: fixed;">
+    	<thead>
+   
+		 <tr align="left" style="background-color:rgb(113, 93, 89);">
+         <th style="padding: 0px;text-align: center;"><font size="1"  face="Georgia">S.NO.</font></th>
+         <th><font size="1"  face="Georgia">Plan ID</font></th>  
+		 <th><font size="1"  face="Georgia">CRF Type</font></th>    
+         <th><font size="1"  face="Georgia">Zone</font></th>
+         <th><font size="1"  face="Georgia">City </font></th> 
+         <th><font size="1"  face="Georgia">Cluster Name</font></th>
+         <th><font size="1"  face="Georgia">AP IP Address</font></th>
+         <th><font size="1"  face="Georgia">Gateway</font></th>
+	     <th><font size="1"  face="Georgia">Subnet Mask</font></th>
+         <th style="padding: 0px;text-align:center;"><font size="1"  face="Georgia">VLAN ID</font></th>
+	     <th><font size="1"  face="Georgia">Switch IP</font></th>
+         <th><font size="1"  face="Georgia">AP Serial No.</font></th>
+         <th><font size="1"  face="Georgia">AP MAC Address</font></th>
+		 <th><font size="1"  face="Georgia">Base Radio MAC</font></th>
+         <th><font size="1"  face="Georgia">Host Name</font></th>
+         <th><font size="1"  face="Georgia">Customer Name</font></th>
+         <th><font size="1"  face="Georgia">Address</font></th>
+         <th style="padding: 0px;text-align: center;"><font size="1"  face="Georgia">AP No.</font></th>
+	     <th><font size="1"  face="Georgia">Floor</font></th>
+	     <th><font size="1"  face="Georgia">AT Type</font></th>
+         <th><font size="1"  face="Georgia">AP Custom Field 1</font></th>
+         <th><font size="1"  face="Georgia">RA</font></th>
+         <th><font size="1"  face="Georgia">Ckt ID</font></th>
+		 <th style="padding: 0px;text-align: center;"><font size="1"  face="Georgia">Band</font></th>
+         <th><font size="1"  face="Georgia">B/H (Fiber/MW/DSL)</font></th>
+		 <th><font size="1"  face="Georgia">B/H vendor</font></th>
+		 <th><font size="1"  face="Georgia">B/H RA</font></th>
+		 <th><font size="1"  face="Georgia">B/H CKT ID</font></th>
+		 <th><font size="1"  face="Georgia">B/H Bw</font></th>
+		 <th><font size="1"  face="Georgia">B/H Node Name</font></th>
+		 <th><font size="1"  face="Georgia">B/H Port</font></th>
+		 <th><font size="1"  face="Georgia">LSI NO</font></th>
+		 <th><font size="1"  face="Georgia">DSL CAF</font></th>
+		 <th><font size="1"  face="Georgia">DSL User</font></th>
+		 <th><font size="1"  face="Georgia">RSU</font></th>
+		 <th><font size="1"  face="Georgia">RSU Port</font></th>
+		 <th><font size="1"  face="Georgia">WAN IP</font></th>
+		 <th><font size="1"  face="Georgia">Lat</font></th>
+         <th><font size="1"  face="Georgia">Long</font></th>
+         <th style="padding: 0px;text-align: center;"><font size="1"  face="Georgia">Acquisition Owner</font></th>
+         <th style="padding: 0px;text-align: center;"><font size="1"  face="Georgia">Business Plan</font></th>
+		 <th><font size="1"  face="Georgia">SSID 1</font></th>
+         <th><font size="1"  face="Georgia">SSID 2</font></th>
+         <th><font size="1"  face="Georgia">SSID 3</font></th>
+         <th><font size="1"  face="Georgia">SSID 4</font></th>
+		 <th><font size="1"  face="Georgia">SSID 5</font></th>
+         <th style="padding: 0px;text-align: center;"><font size="1"  face="Georgia">SSID 6</font></th>
+         <th><font size="1"  face="Georgia">Contact Person</font></th>
+         <th><font size="1"  face="Georgia">Contact Detail</font></th>
+		 <th><font size="1"  face="Georgia">Start Date</font></th>
+         <th><font size="1"  face="Georgia">End Date</font></th>
+		 <th><font size="1"  face="Georgia"> Status</font></th>
+		 <th><font size="1"  face="Georgia">AP Detail</font></th>
+		</tr></thead>
+
+<tbody>
+		 <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>1</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/CHD/WIFI/ACC/NDP/030918/006</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Chandigarh</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S.C.O-422, Sector 35C_Brista</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.115.131</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.115.129</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0.0.0.0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A4LS</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;38:0E:4D:05:C6:D0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4040200011090006</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Barista</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S.C.O-422, Sector 35C_Pizza Hut</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;GF</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CH_CHD_CS_BST_WIFI CAFE_001_006</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2813866</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8Mbps</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;17221952</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;017244700965_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;C35-H1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/12 & 1/1/13</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;30.722403</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;76.761359</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@Airtel Free Wifi Zone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ankush Dhawan</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8699500444</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;15-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;15-NOV-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_1.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+		 <tr align="left">
+		 <td><font size="1" color="#000000" face="Georgia"><b>2</b></font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;HYD/2018-19/WIFI/NDP/18092018/0182</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Hyderabad</font></td>    
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;HYDERABAD SMART CITY Wi-Fi</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.93.51</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.93.49</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.240</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;101839000397</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;44:1E:98:3E:1A:40</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044900001020182</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Hy_Fy_West Metro</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;West Metro,Suraksha Nagar,Hyderabad</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ground</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;?HYD_Public wifi_0SN_001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2842718</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1558048</font></td>    
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;150</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2548715</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BLTM-ANG1000909</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;150</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Q/A</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/9, 1/1/10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;17.500562</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;78.326694</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mrinal</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel_Hy-Fy</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;?@MyVodafoneWiFi</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N A</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TUSHIN DEV</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9963011976</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;13-NOV-18</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-JAN-19</font></td> 
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_279.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>3</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/RMZECOWORLD/ACC/EXT/261018/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco World Extension Lift Lobby</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.63.84</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.63.1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;361802007023</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18:4B:0D:3B:71:80</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500009880207</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco World Extension Lift Lobby</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Opp. Pratham Motors Devarabeesanahalli Bellandur, Marathahalli Outer Ring Road, Bangalore</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;207</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Basement 2</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_PUB_ECOWORLD_001_126</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2869461</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1538925</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;512mb</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cisco</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2869461</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1538925</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;512</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BGL/ARP/982</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/4/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ARP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/4/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.919895</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.684766</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free WiFi by Airtel & MyWired</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;31-DEC-21</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_267.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>4</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/DEL/WIFI/ACC/NDP/191118/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Delhi</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Barista C.P Regal New Delhi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.111.94</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.111.93</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.252</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10:000:000:00</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A3CZ</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;6C:B2:AE:53:81:34</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;b4:de:31:0d:db:30</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4041000011090024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Barista C.P Regal New Delhi</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Shop No 9, Regal Building, Sansad Marg, Connaught Place, New Delhi, Delhi 110001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;GF</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NCR_NDL_F_BARISTA-REGAL_HTL_CU_CS_I_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2893822</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG07368</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16mbps</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2893822</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG07368</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16mbps</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;JPH</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;H2/13/13</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;11105611</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;011100072032_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;JPH</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28.63035</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.217469</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free Airtel WiFi Zone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Surabhi Sharma</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8130148538</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;23-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;23-NOV-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_272.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>5</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/DEL/WIFI/ACC/NDP/211118/003</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Delhi</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Craft Film School New Delhi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.32.226</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.32.225</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.112.26</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A34P</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;00:00:00:00:00:00</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;b4:de:31:0d:85:10</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4041000011560001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Craft Film School New Delhi</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B-11, Qutab Instutional Area, New Delhi 110016</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Basement</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NCR_NDL_F_CRAFT-FILM_EDU_CU_CS_I_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2897686</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG06528</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16mbps</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2897686</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG06528</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16mbps</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;QIA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/7 & 1/1/8</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;11213411</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;011100091725_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;QIA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/7 & 1/1/8</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28.539126</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.181708</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Free Airtel Wi-Fi</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Surabhi Sharma</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8130148538</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;22-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;26-NOV-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_276.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>6</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/LDH/WIFI/ACC/NDP/051118/032</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ludhiana</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.44.10</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.44.9</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4030</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0.0.0.0</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;501703002944</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;34:FA:9F:23:FF:60</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4040200000050032</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency, Ludhiana</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ground</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PB_LDH_RU_PUB_OMAXE_001_032</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2881779</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0LF</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TS1-1/TS3-1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0LF-H1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TS1-1/TS3-1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;75.79983</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;30.8482</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Airtel Free Wifi Zone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+       	 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Paurush Sharma</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;7087347768</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;24-NOV-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_269.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>7</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/RMZECOWORLD/ACC/EXT/261018/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco World Extension Lift Lobby</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.63.110</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.63.1</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.0</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;341839000170</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18:4B:0D:28:62:00</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500009880233</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco World Extension Lift Lobby</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Opp. Pratham Motors Devarabeesanahalli Bellandur, Marathahalli Outer Ring Road, Bangalore</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;233</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;5A 6th floor</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_PUB_ECOWORLD_001_234</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2869461</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1538925</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;512mb</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cisco</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2869461</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1538925</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;512mb</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BGL/ARP/982</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/4/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ARP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/4/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.919895</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.684766</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free WiFi by Airtel & MyWired</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-NOV-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_275.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>8</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/CHD/WIFI/ACC/NDP/110518/002</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;SAS NAGAR(MOHALI)</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Barista</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.115.18</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.115.17</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0.0.0.0</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A346</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;6C:B2:AE:53:83:04</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4040200011090002</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Barista</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;SCF No-12, Phase-3, #B@</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ground</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CH_CHD_CS_BST_WIFI CAFE_001_002</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;017244701754_dsl</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;017244701754_dsl</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2742723</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-ANG00834</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;M60</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/12 & 1/1/13</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-ANG00834</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;17223002</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;017244701754_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;M60-H2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/12  & 1/1/13</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;30.713231</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;76.718171</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FNL</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Airtel Free Wifi Zone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ankush Dhawan</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8699500444</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;17-NOV-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_266.CSV" target="_blank">Download</a></i></p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>9</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/RMZECOWORLD/ACC/EXT/261018/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco World Extension Lift Lobby</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.63.84</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.63.1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.235</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;207</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18:4B:0D:3B:71:80</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500009880207</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco World Extension Lift Lobby</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Opp. Pratham Motors Devarabeesanahalli Bellandur, Marathahalli Outer Ring Road, Bangalore</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;207</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Basement 2</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_PUB_ECOWORLD_001_126</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2869461</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1538925</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;512mb</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cisco</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2869461</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1538925</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;512</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BGL/ARP/982</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/4/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ARP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/4/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.919895</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.684766</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free WiFi by Airtel & MyWired</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;16-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;23-SEP-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_268.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>10</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/DEL/WIFI/ACC/NDP/211118/002</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Delhi</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cygnus Orthocare Hospital New Delhi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.32.210</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.32.209</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.240</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.112.18</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A3GX</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;11:00:11:00:1D:CC</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4041000011550001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cygnus Orthocare Hospital New Delhi</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;C-5/29, Opposite IIT Delhi Main Road, Safdarjung Development Area, Hauz Khas, New Delhi 110016</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Basement</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Basement Near Physiotherapy</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2887650</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG1567618</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;15mbps</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2887650</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG1567618</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;15mbps</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;DSF</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/4</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28.546357</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.197337</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free Airtel WiFi Zone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Surabhi Sharma</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8130148538</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;21-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;22-NOV-18</font></td> 
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+		 <td><p><i><a href="upload/apdetail_274.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>11</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MUM/DEL/WIFI/ACC/NDP/231218/01</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Pune</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Aditya Birla</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.86.128/26</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.86.129</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.192</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.74.86</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A3Q6</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;380E4D05BDB4</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4049000002050001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Aditya Birla</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Aditya Birla Marg, Near Morya Mangal Karyalaya, Thergaon, Chinchwad, Pune Survey Date:- 15 April 2017</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;48</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2nd floor</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2890608</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG00021</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;90 Mbps</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2890608</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG00021</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;100mb</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PUN_ADB_901_1AC_HAT910BR200 (10.213.12.2)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PUN_ADB_901</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0/2/20</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18.625716</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;73.77469</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FNL</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Free AIRTEL WIFI ZONE</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ABMH WIFI</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Syed</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;7720074348</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;23-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;23-NOV-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_278.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>12</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/LDH/WIFI/ACC/NDP/051118/032</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ludhiana</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.44.10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.44.9</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4030</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0.0.0.0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;501703002944</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;34:FA:9F:23:FF:60</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4040200000050032</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency, Ludhiana</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ground</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PB_LDH_RU_PUB_OMAXE_001_032</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2881779</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0LF</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TS1-1/TS3-1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0LF-H1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TS1-1/TS3-1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;75.79983</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;30.8482</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Airtel Free Wifi Zone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Paurush Sharma</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;7087347768</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;24-NOV-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_269.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>13</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/LDH/WIFI/ACC/NDP/051118/032</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ludhiana</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.44.10</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.44.9</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4030</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0.0.0.0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;501703002944</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;34:FA:9F:23:FF:60</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4040200000050032</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Omaxe Residency, Ludhiana</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ground</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PB_LDH_RU_PUB_OMAXE_001_032</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2881779</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0LF</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TS1-1/TS3-1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TMPB-T1698218</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;016144817541_dsl</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0LF-H1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TS1-1/TS3-1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;75.79983</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;30.8482</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Airtel Free Wifi Zone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;-</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Paurush Sharma</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;7087347768</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;24-NOV-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_269.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>14</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PUN/DEL/WIFI/ACC/NDP/040119/25</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Pune</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Swapnlok</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.43.0/30</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.43.1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.252</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.90.36</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;261603304312</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1C:B9:C4:3A:76:50</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4049000002260001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Swapnlok</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Swapnlok Pune</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2942835</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1575563</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;5</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2942835</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;400</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Binawat Paradise</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;(0/2/4 & 0/2/5)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18.480088</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;73.947055</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free AIRTEL WIFI ZONE</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ajmal Chavan</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9673002549</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;07-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28-JAN-19</font></td> 
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+		 <td><p><i><a href="upload/apdetail_297.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>15</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/ENZYME TECH PARK HSR 27/ACC/NDP/150119/001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Enzyme Tech Park HSR 27</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.56.170</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.56.169</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;421839007977</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B4:79:C8:2F:5A:50</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500011290001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Enzyme Tech Park 27</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;27th Main Road, 1604, 22nd Cross Rd, BDA Layout, HSR Layout, Bengaluru, Karnataka 560102</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Canteen</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_EDU_ENZYMEHSR27_021</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2933340</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1576870</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2933340</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1576870</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MKC</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MKC - H2/1/10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;80103543</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;080100182728_kk</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MKC</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MKC - H2/1/10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.911527</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.65138</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free - AirtelWiFiZone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;22-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-NOV-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_301.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>16</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/ENZYME TECH PARK KORMANGALA/ACC/NDP/310119/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Enzyme Tech Park, Kormangala</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.56.178</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.56.177</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;421839007325 </font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B4:79:C8:2F:31:90</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500011400001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Enzyme Tech Park, Kormangala</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Kormangala, Bangalore</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;gr</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_EDU_ENZYME KORMANGALA_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2957389</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1578837</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2957389</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1578837</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WLG</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Po3</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;80103548</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;080100232263_kk</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WLG</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WLG-H5/1/14</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.93395</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.93395</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free -  Airtel WiFi Zone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;31-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-NOV-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_318.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>17</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/ENZYME TECH PARK HSR 25/ACC/NDP/150119/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Enzyme Tech Park 25</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.56.162</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.56.161</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;421839008439</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B4:79:C8:2F:77:30</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500011280001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Enzyme Tech Park 25</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25th Main Road, 1604, 22nd Cross Rd, BDA Layout, HSR Layout, Bengaluru, Karnataka 560102</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Terrace</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_EDU_ENZYMEHSR25_021</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2933340</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1576870</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2933340</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1576870</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MKC</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MKC - H2/1/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;80103543-1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;080100182747_kk</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MKC</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;MKC - H2/1/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.908497</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.650902</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free - AirtelWiFiZone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;22-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;21-JAN-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_300.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>18</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/BlOSSOM HOSPITAL/ACC/NDP/17119/001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Blossom Hospital</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.58.242</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.58.241</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.240</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;331839008668</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;EC:58:EA:3A:C2:20</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500011270001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Blossom Hospital</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Husa Road, Bangalore</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gr</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_HTP_BLOSSOMHOSPITAL_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2897384</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1575930</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cisco</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2897384</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1575930</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CMW</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/1/3</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CMW</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/1/3</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.870496</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.659431</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Free Airtel Wi-Fi </font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;29-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-NOV-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_314.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>19</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/RMZECOSPACE/ACC/EXT/261018/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco Space Extension Lift Lobby 3B</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.62.151</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.62.129</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.192</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;371839002953</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18:4B:0D:31:C1:C0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500009900043</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco Space Extension Lift Lobby 3B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Devarabeesanahalli Bellandur, Marathahalli Outer Ring Road, Bangalore</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;43</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;3b basement1</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_PUB_RMZECOSPACE_001_043</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2735533</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1534959</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;72</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2735533</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1534959</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;72</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BGL/ESP/901</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Po20</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;80103537</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;08099963427_kk</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ESP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ESP-H1/1/43</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.926307</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.680538</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free WiFi by Airtel & MyWired</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;29-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;31-DEC-21</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_289.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>20</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/DEL/WIFI/ACC/NDP/110119/003</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Delhi</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Telangana Bhavan New Delhi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.33.2</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.33.1</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.240</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4027</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.12.12.12</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A4B2</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;00:A7:42:A6:1A:08</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4041000011630001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Telangana Bhavan New Delhi</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1, Ashoka Road, Hyderabad House, New Delhi, 110001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4th F</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NCR_NDL_F_TELANGANA-BH_GOV_FI_CS_I_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2805959</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG1550889</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;50</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2805959</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG1550889</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;50</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;DAP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/15</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28.617036</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.2254</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Free Airtel Wi-Fi</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;My Airtel Wi-Fi</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Surabhi Sharma</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8130148538</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28-JAN-19</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_311.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>21</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N/DEL/WIFI/ACC/NDP/110119/003</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Delhi</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Telangana Bhavan New Delhi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.33.2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.86.33.1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.240</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4027</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.12.12.12</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A4B2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;00:A7:42:A6:1A:08</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4041000011630001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Telangana Bhavan New Delhi</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1, Ashoka Road, Hyderabad House, New Delhi, 110001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4th</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NCR_NDL_F_TELANGANA-BH_GOV_FI_CS_I_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2805959</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG1550889</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;50</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Airtel</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2805959</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;TEMD-ANG1550889</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;50</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;DAP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1/1/15</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28.617036</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.2254</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Free Airtel Wi-Fi</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;My Airtel Wi-Fi</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Surabhi Sharma</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;8130148538</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;14-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28-JAN-19</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_298.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>22</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/PIZZAHUT JP Morgan/ACC/NDP/300518/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Pizza Hut, J P Morgan</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.60.102</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.60.101</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.252</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;101839000463</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;44:1E:98:3E:1E:60</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500011130010</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Pizza Hut, J P Morgan</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Pizza Hut, J P Morgan20/5 Narayan Swamy Building Kadabesaw Halli Outer Ring Road, Na, Bangalore, 560103, Karnataka, India</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gr</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_PUB_PIZZAHUTJP MORGAN_001_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2772495</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1577637</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2772495</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1577637</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PNT</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PNT-H5/4/41</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;80103529</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;080100192316_kk</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PNT</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PNT-H5/4/41</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.938965</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.695309</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free - AirtelWiFiZone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;22-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-NOV-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_303.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>23</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/RMZWORLD/ACC/EXT/261018/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco World - Expansion</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.63.121</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.63.1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;361839011756</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18:4B:0D:30:86:50</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18:4B:0D:30:86:50</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500009880244</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco World - Expansion</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Devarabeesanahalli Bellandur, Marathahalli Outer Ring Road, Bangalore</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;226</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10th Floor</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_PUB_ECOWORLD_001_226</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2869461</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1538295</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;512</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cisco</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2869461</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1538295</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;512</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ARP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;gi 0/4/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ARP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;gi 0/4/2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.919895</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.684766</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free WiFi by Airtel & MyWired</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;My Airtel WiFi</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;31-DEC-21</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_308.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>24</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/TRIFECTA ESPLANADE/ACC/NDP/280119/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RWA - Trifecta Esplanade</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.62.26</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.62.25</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;501703002042</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;34:FA:9F:24:34:80</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500011310001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RWA - Trifecta Esplande</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Belathur Main Road, Near The Sai Baba Temple Kumbena Agrahara, Kadugodi, Belathur, Krishnarajapura, Bengaluru, Karnataka 560067</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gr</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_PUB_TRIFECTA ESPLANDE_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2976602</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1578212</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2976602</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1578212</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BLT</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Po1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;na</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;na</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BLT</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;po1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;na</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;13.005653</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.751088</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Circle Business</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free - AirtelWiFiZone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;30-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-NOV-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_316.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>25</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PUN/DEL/WIFI/ACC/NDP/181218/19</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Pune</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ruby Hall</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.86.224/27</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.86.225</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.224</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.90.33</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2147A442</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;00:5D:73:92:8E:B4</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4049000002240001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ruby Hall Clinic</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Sasoon Road,near railway station, Pune, Maharashtra 411001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2927168</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1573570</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;50</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BrightStar</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2927168</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;100</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;PUN_GRK_901_1AC_H950BXXR111 (10.228.16.7)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0/3/1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;18.533388</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;73.877158</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FNL</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;@Free AIRTEL WIFI ZONE</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Ajmal Chavan</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9673002549</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;02-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;07-JAN-19</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_296.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>26</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/BOSCH/ACC/NDP/240119/002</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Robert Bosch International</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;125.21.182.226 </font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;125.21.182.225</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2218A9PD</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;78:72:5D:A8:F0:64</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500010860001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Robert Bosch International</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BOSCH, Adugudi, Bangalore-560030</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;GR</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_CS_PUB_BOSCH_001_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2656018</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BOCH-1507787</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4mbps</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cisco</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2656018</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BOCH-1507787</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4mbps</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BGL/WLG/971</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/0/7</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WLG</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gi 0/0/7</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.945816</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.60422</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Circle Business</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RBIN_Guest</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mittal</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;7760942398</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-NOV-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_306.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>27</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/RMZECOSPACE/ACC/EXT/261018/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;South</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco Space 3A Extension Lift Lobby</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.62.158</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.62.129</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.192</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;111809004243</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;60:D0:2C:16:42:A0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500009900050</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;RMZ Eco Space 3A Extension Lift Lobby</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Outer Ring Road, Bangalore East Taluk, Varthur Hobli, Bengaluru, Karnataka 560103</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;50</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gr</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_PUB_ECOSPACE_001_50</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2735533</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1534959</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;72</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2735533</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1534959</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;72</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BGL/ESP/901</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Po20</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;ESP</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;na</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.926307</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp; 77.680538</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Free WiFi by Airtel & MyWired</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;29-NOV-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;31-DEC-21</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_287.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>28</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;E/KOL/WIFI/ACC/NDP/061218/01</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;East</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KOLKATA</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KOLKATA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.2</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;0.0.0.0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;FGL2139A4P9</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;00A742933B0C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4043100000110001 to 4043100000110004</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Wedoria Technologies</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9 Lala Rajpat Rai Sarani, Elgin Road,3rd floor. Kolkata-700020</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;3RD FLOOR</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;N_KOL_WIFI_ACC_NDP_WTPL_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2768690</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WTPL-ANG1542790</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;20</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Cloudric Technologies</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2768690</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WTPL-ANG1542790</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;20</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KOL_BZR_901_1AC_HCX6HX2R307</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;G7/6/4 & G8/10/4</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12202583</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;LSI- 12202583</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BZR-H1</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;BZR/H802MABC/1/F0/17/Frame:0/Slot:17/0</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;22.538201</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;88.352248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Circle Business</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2B</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;wedoria</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Amit Bhowmick</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9831049364</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;07-DEC-18</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;07-DEC-18</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+         <td><p><i><a href="upload/apdetail_292.CSV" target="_blank">Download</a></i> </p></td></tr>
+	
+    
+    
+         <tr align="left">
+         <td><font size="1" color="#000000" face="Georgia"><b>29</b></font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;S/BLR/SRUSHTI HOSPITAL/ACC/NDP/250119/001</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Customer</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;North</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bangalore</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Srushti Hospital</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.62.10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10.208.62.09</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;255.255.255.248</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4024</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;192.168.1.253</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;291303004323</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2C:E6:CC:07:CD:10</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;4044500011320001</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Shrusti Hospital</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Bommanhalli, Bangalore</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;1</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Gr</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Indoor</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KA_BGL_RU_HPT_SHRUSTI HOSPITAL_001_001</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2973577</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1577990</font></td>    
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Fiber(FTTH/GPON)</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Huawei</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;2973577</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;WIPHI-ANG1577990</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;10</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KCN</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Po5</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KCN</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;KCN-H3/4/3</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;12.898011</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;77.620742</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Firefly</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;B2C</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;AirtelWiFiZone</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;airtel hangout app only</font></td>
+		 <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;`@MyVodafoneWiFi</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;VodafoneWiFiA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;NA</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;Mr. Purushotham</font></td>
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;9980848473</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;28-JAN-19</font></td>
+         <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;25-NOV-22</font></td> 
+	     <td><font size="1" color="#000000" face="Book Antiqua">&nbsp;CRF accepted by NOC</font></td>
+	     <td><p><i><a href="upload/apdetail_309.CSV" target="_blank">Download</a></i> </p></td></tr>
+	</tbody></table>
+    
+    <script language="JavaScript">
+    function JS_openwindow(edit)
+    {
+        
+            var url=edit;
+            //alert(url);
+            var winWidth = 1250 ;
+            var winHeight = 400 ;
+            var posLeft = ( screen.width - winWidth ) / 2 ;
+            var posTop = ( screen.height - winHeight ) / 2 ;
+            myWindow = window.open( url,'mywindow','width=' + winWidth + ',height=' + winHeight +',top=' + posTop + ',left=' + posLeft +',resizable=no,scrollbars=yes,toolbar=no,titlebar=no,' + 'location=no,directories=no,status=no,menubar=0,copyhistory=no' ) ;
+    }
+    
+</script>
+
+
+</body>
+</html>
+
